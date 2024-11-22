@@ -1,8 +1,8 @@
 import Image from './Image';
-import GitHubLink from './githubLink';
-import EmailLink from './emailLink';
-import LinkedInLink from './linkedinLink';
-import ResumeLink from './resumeLink';
+import GitHubLink from './links/githubLink';
+import EmailLink from './links/emailLink';
+import LinkedInLink from './links/linkedinLink';
+import ResumeLink from './links/resumeLink';
 
 const profilePane = () => {
   const githubURL = 'https://github.com/RasmusLC1';
