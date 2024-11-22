@@ -39,10 +39,9 @@
     position: absolute;
     top: 40px;
     width: 200px;
-    height: 1000px;
+    height: 2000px;
     left: 0;
     background-color: #242424;
-    border: 1px solid #b85c0b;
     border-radius: 5px;
     overflow: hidden;
   }

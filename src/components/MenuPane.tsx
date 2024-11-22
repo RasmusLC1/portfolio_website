@@ -10,6 +10,9 @@ const menuPane = () => {
             <a href="#work">Work Experience</a>
           </li>
           <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
             <a href="#education">Education</a>
           </li>
           {/* Add more menu items as needed */}

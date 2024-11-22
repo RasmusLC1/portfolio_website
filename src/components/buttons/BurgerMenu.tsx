@@ -37,7 +37,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ setCurrentPage, isMenuOpen, set
             <li onClick={() => handleMenuClick('frontPage')}>Front Page</li>
             <li onClick={() => handleMenuClick('Dungeon Crawler')}>Dungeon Crawler</li>
             <li onClick={() => handleMenuClick('Polynomial Multiplication')}>Polynomial Multiplication</li>
-            <li onClick={() => handleMenuClick('Recipe App')}>Recipe App</li>
+            <li onClick={() => handleMenuClick('Recipe Web App')}>Recipe Web App</li>
             <li onClick={() => handleMenuClick('Wolfenstein Renderer')}>Wolfenstein Renderer</li>
             {/* Add more menu items as needed */}
           </ul>

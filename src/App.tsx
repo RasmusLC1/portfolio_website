@@ -43,7 +43,7 @@ function App() {
         return <DungeonCrawler />;
       case 'Polynomial Multiplication':
         return <PolynomialMultiplication />;
-      case 'Recipe App':
+      case 'Recipe Web App':
         return <RecipeApp />;
       case 'Wolfenstein Renderer':
         return <WolfenSteinRenderer />;

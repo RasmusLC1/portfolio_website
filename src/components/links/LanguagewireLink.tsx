@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Image from '../Image';
 
 interface Props {
-  link: string; // Email address to link to
+  link: string; 
 }
 
 const LanguageWireLink = ({ link }: Props) => {

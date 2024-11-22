@@ -2,13 +2,15 @@ import { useState } from 'react';
 
 interface Props {
   link: string;
+  size?: string;
+  className?: string;
 }
 
-const GitHubLink = ({ link }: Props) => {
+const GitHubLink = ({ link, size = "32", className = "link-container"}: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="link-container">
+    <div className= {className}>
       <a
         href={link}
         target="_blank"
@@ -20,8 +22,8 @@ const GitHubLink = ({ link }: Props) => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
-          width="32"
-          height="32"
+          width= {size}
+          height= {size}
           fill="white"
           aria-label="GitHub"
         >
