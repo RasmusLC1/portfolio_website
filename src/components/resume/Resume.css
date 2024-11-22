@@ -1,16 +1,22 @@
 /* WorkExperience.css */
 
 /* Main container */
-.work-experience {
+.work-experience,
+.about-me,
+.education{
   padding: 20px;
   background-color: #242424;
   color: #d7d6d6;
   font-family: 'Arial', sans-serif;
 }
 
+
+
 /* Main header */
-.work-experience h2 {
-  font-size: 2rem;
+.work-experience h2,
+.about-me h2,
+.education h2 {
+  font-size: 2.5rem;
   color: #b85c0b;
   margin-bottom: 20px;
   border-bottom: 2px solid #b85c0b;
@@ -18,37 +24,47 @@
 }
 
 /* Job container */
-.job {
+.job ,
+.degree{
   margin-bottom: 30px;
 }
 
 /* Secondary header */
-.job h3 {
+.job h3,
+.degree h3{
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
   margin-bottom: 5px;
 }
 
 /* Job period */
-.job-title {
-  font-size: 1.2rem;
+.job-title
+.degree-title{
+  font-size: 1.5rem;
   color: white;
   margin-bottom: 10px;
 }
 
 /* Job period */
-.job-period {
-  font-size: 0.8rem;
+.job-period,
+.degree-period{
+  font-size: 1.2rem;
   color: #b0b0b0;
   margin-bottom: 10px;
 }
 
 /* Responsibilities list */
-.responsibilities {
+.responsibilities,
+.courses {
   list-style-type: disc;
   margin-left: 20px;
+}
+
+.courses li{
+  margin-bottom: 5px;
+  line-height: 2;
 }
 
 .responsibilities li {
@@ -79,4 +95,15 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.about-me-body {
+  margin-bottom: -5px;
+}
+
+.ku-img {
+  background-color: white;
+  /* Optional: Ensure the image doesn't exceed its container */
+  width: 100%;
+  height: auto;
 }

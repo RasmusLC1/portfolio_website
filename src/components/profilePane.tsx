@@ -12,6 +12,7 @@ const profilePane = () => {
 
   const renderLinks = () => {
     return (
+        
       <div className="links-container">
         <GitHubLink link={githubURL} />
         <LinkedInLink link={linkedinhubURL} />

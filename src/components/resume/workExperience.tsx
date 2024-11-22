@@ -1,7 +1,7 @@
 // WorkExperience.js
 import React from 'react';
-import Job from './job';
-import './WorkExperience.css';
+import Job from './Job';
+import './Resume.css';
 
 const WorkExperience = () => {
   const LanguageWire = {
@@ -48,7 +48,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <div className="work-experience">
+    <div id="work" className="work-experience">
       <h2>WORK EXPERIENCE</h2>
       <Job job={LanguageWire} />
       <Job job={Apple} />

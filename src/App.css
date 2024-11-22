@@ -3,37 +3,75 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* Remove overflow: hidden to allow scrolling within child elements */
-  /* overflow: hidden; */
 }
 
-/* Container that holds both panes */
+/* Main content container */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Menu pane at the top */
+.pane-menu {
+  width: 100%;
+  background-color: #242424;
+  box-sizing: border-box;
+  margin-left: -60px;
+}
+
+/* Style the menu */
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  color: #d7d6d6;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.menu a:hover {
+  color: #b85c0b;
+}
+
+/* Container that holds the side-by-side panes */
 .split-container {
   display: flex;
-  height: 100vh; /* Use viewport height for consistent sizing */
-  overflow: hidden; /* Prevent the container from scrolling */
+  flex: 1; /* Fills the remaining space */
+  overflow: hidden;
 }
 
-/* Common styles for both panes */
+/* Common styles for panes */
 .pane {
   background-color: #242424;
   padding: 20px;
-  box-sizing: border-box; /* Include padding within height and width */
+  box-sizing: border-box;
 }
 
 /* Styles for the stationary pane */
 .pane-stationary {
-  width: 30%; /* Adjust as needed */
-  overflow: hidden; /* Prevent this pane from scrolling */
-  height: 100%; /* Fill the container's height */
+  width: 30%;
+  overflow: hidden;
 }
 
 /* Styles for the scrollable pane */
 .pane-scrollable {
-  width: 70%; /* Adjust as needed */
-  overflow-y: auto; /* Allow vertical scrolling */
+  width: 70%;
+  overflow-y: auto;
   overflow-x: hidden;
-  height: 100%; /* Fill the container's height */
 }
 
 /* Remove unnecessary margins */
@@ -41,6 +79,20 @@ html, body {
 .pane-scrollable {
   margin: 0;
 }
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+
+  .pane-stationary,
+  .pane-scrollable {
+    width: 100%;
+    height: auto; /* Adjust height for stacked layout */
+  }
+}
+
 
 /* Image styles remain unchanged */
 .rounded-image {

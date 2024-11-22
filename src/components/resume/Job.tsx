@@ -18,13 +18,6 @@ interface JobProps {
 const Job: React.FC<JobProps> = ({ job }) => {
   const { company, title, period, responsibilities } = job;
 
-  const languagewireSVG = (
-    <span className="company-logo">
-    <Image className="img-fluid languagewire-img" path={"languagewire.jpg"} />
-    </span>
-  );
-
-
   // Function to extract the company name (before the comma)
   const getCompanyName = (fullCompanyName: string): string => {
     return fullCompanyName.split(",")[0].trim().toLowerCase();

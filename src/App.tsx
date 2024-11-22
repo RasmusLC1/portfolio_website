@@ -1,23 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import profilePane from "./components/profilePane";
-import resumePane from "./components/resumePane";
+import resumePane from "./components/resume/resumePane";
+import menuPane from "./components/MenuPane";
+import BurgerMenu from "./components/buttons/BurgerMenu";
 import "./App.css";
 
 function App() {
-  const stationaryPane = () => {
-    return profilePane();
-  };
 
-  const scrollablePane = () => {
-    return resumePane();
-  };
+  const [currentPage, setCurrentPage] = useState("frontPage")
+
+  const frontPage = () => {
+    return (
+      <div className="main-content">
+        {menuPane()} 
+      <div className="split-container">
+        {profilePane()}
+        {resumePane()}
+      </div>
+    </div>
+    )
+  }
+
+  const getCurrentPage = () => {
+    switch (currentPage){
+      case "frontPage":
+        return frontPage()
+      default:
+        return frontPage()
+    }
+  }
+  
 
   const splitPane = () => {
+    
     return (
-      <div className="split-container">
-        {stationaryPane()}
-        {scrollablePane()}
-      </div>
+      getCurrentPage()
     );
   };
 
