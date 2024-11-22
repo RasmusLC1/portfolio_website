@@ -1,4 +1,3 @@
-// WorkExperience.js
 import React from 'react';
 import Job from './Job';
 import './Resume.css';

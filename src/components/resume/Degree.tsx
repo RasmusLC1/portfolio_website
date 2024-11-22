@@ -1,4 +1,3 @@
-// Degree.tsx
 import React from 'react';
 import KULink from '../links/KULink';
 

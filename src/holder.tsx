@@ -1,10 +1,11 @@
+import React from 'react';
 import Image from './Image';
 import GitHubLink from './links/githubLink';
 import EmailLink from './links/emailLink';
 import LinkedInLink from './links/linkedinLink';
 import ResumeLink from './links/resumeLink';
 
-const profilePane = () => {
+const ProfilePane = () => {
   const githubURL = 'https://github.com/RasmusLC1';
   const linkedinhubURL = 'https://www.linkedin.com/in/rcarlsen853/';
   const emailURL = 'rasmus.lc3@gmail.com';
@@ -12,12 +13,11 @@ const profilePane = () => {
 
   const renderLinks = () => {
     return (
-        
       <div className="links-container">
         <GitHubLink link={githubURL} />
         <LinkedInLink link={linkedinhubURL} />
         <EmailLink link={emailURL} />
-        <ResumeLink link = {resumeURL}/>
+        <ResumeLink link={resumeURL} />
       </div>
     );
   };
@@ -37,4 +37,4 @@ const profilePane = () => {
   );
 };
 
-export default profilePane;
+export default ProfilePane;

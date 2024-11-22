@@ -1,0 +1,40 @@
+/* Link container styles */
+.link-container {
+    width: 50px;
+    height: 80px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Link hover effects */
+  .github-link:hover svg,
+  .email-link:hover svg,
+  .linkedin-link:hover svg,
+  .resume-link:hover svg {
+    fill: #b85c0b;
+    transform: scale(1.2);
+    /* Scaling removed to prevent layout shifts */
+  }
+  
+  /* Link styles */
+  .github-link,
+  .email-link,
+  .linkedin-link,
+  .resume-link {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    transition: fill 0.2s ease-in-out;
+  }
+  
+  /* Links container alignment */
+  .links-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }

@@ -1,4 +1,3 @@
-// Job.tsx
 import React from "react";
 import Image from "../Image";
 import AppleLink from "../links/appleLink";

@@ -1,9 +1,9 @@
-/* WorkExperience.css */
 
 /* Main container */
 .work-experience,
 .about-me,
-.education{
+.education,
+.projects-section{
   padding: 20px;
   background-color: #242424;
   color: #d7d6d6;
@@ -15,7 +15,8 @@
 /* Main header */
 .work-experience h2,
 .about-me h2,
-.education h2 {
+.education h2,
+.projects-section h2 {
   font-size: 2.5rem;
   color: #b85c0b;
   margin-bottom: 20px;
@@ -25,13 +26,15 @@
 
 /* Job container */
 .job ,
-.degree{
+.degree
+.project{
   margin-bottom: 30px;
 }
 
 /* Secondary header */
 .job h3,
-.degree h3{
+.degree h3,
+.project h3{
   display: flex;
   align-items: center;
   font-size: 2rem;
@@ -39,17 +42,24 @@
   margin-bottom: 5px;
 }
 
+
 /* Job period */
 .job-title
-.degree-title{
+.degree-title,
+.project-title{
   font-size: 1.5rem;
   color: white;
   margin-bottom: 10px;
 }
 
+.project-title:hover {
+  color: #b85c0b;
+}
+
 /* Job period */
 .job-period,
-.degree-period{
+.degree-period,
+.project-period{
   font-size: 1.2rem;
   color: #b0b0b0;
   margin-bottom: 10px;
@@ -57,7 +67,8 @@
 
 /* Responsibilities list */
 .responsibilities,
-.courses {
+.courses,
+.project-features{
   list-style-type: disc;
   margin-left: 20px;
 }

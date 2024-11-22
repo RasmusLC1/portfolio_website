@@ -1,4 +1,3 @@
-// Education.tsx
 import React from 'react';
 import Degree from './degree';
 import './Resume.css';

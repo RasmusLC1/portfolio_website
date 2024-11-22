@@ -38,6 +38,8 @@
   .menu-items {
     position: absolute;
     top: 40px;
+    width: 200px;
+    height: 1000px;
     left: 0;
     background-color: #242424;
     border: 1px solid #b85c0b;
