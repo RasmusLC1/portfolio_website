@@ -27,10 +27,10 @@ const Projects = ({setCurrentPage}: ResumeProps) => {
       };
 
       const WolfensteinRenderer = {
-        title: 'Wolfenstein renderer',
+        title: 'Wolfenstein Renderer',
         language: ["C#"],
-        libraries: ["Windows Form"],
-        technologies: [".NET"],
+        libraries: [".NET", "Windows Form"],
+        technologies: [],
         period: 'September 2023 - October 2023',
         github: "https://github.com/RasmusLC1/Wolfenstein-Renderer",
         features: "Focus on simulating 3D rendering using Wolfenstein rendering method",

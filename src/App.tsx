@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import profilePane from "./components/profilePane";
+import ProfilePane from "./components/profilePane";
 import ResumePane from "./components/resume/ResumePane";
 import menuPane from "./components/MenuPane";
 import BurgerMenu from "./components/buttons/BurgerMenu";
@@ -24,7 +24,7 @@ function App() {
         <div className="main-content">
           <div className="split-container">
             <div className="pane pane-stationary">
-              {profilePane()}
+                <ProfilePane setCurrentPage = {setCurrentPage}/>
             </div>
             <div className="pane pane-scrollable">
               <ResumePane setCurrentPage={setCurrentPage} />

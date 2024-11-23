@@ -4,11 +4,18 @@ import EmailLink from './links/emailLink';
 import LinkedInLink from './links/linkedinLink';
 import ResumeLink from './links/resumeLink';
 
-const profilePane = () => {
+interface ProfileProps{
+  setCurrentPage: (page: string) => void;
+}
+
+const ProfilePane = ({setCurrentPage}: ProfileProps) => {
   const githubURL = 'https://github.com/RasmusLC1';
   const linkedinhubURL = 'https://www.linkedin.com/in/rcarlsen853/';
   const emailURL = 'rasmus.lc3@gmail.com';
   const resumeURL = '../../public/CV/CV - Rasmus Ladefoged Carlsen.pdf';
+
+
+
 
   const renderLinks = () => {
     return (
@@ -22,6 +29,16 @@ const profilePane = () => {
     );
   };
 
+  const information = () => {
+    return (
+      <>
+      <h1>Rasmus Ladefoged</h1>
+      <p>Full Stack Developer</p>
+      <p>🎈Copenhagen Denmark🇩🇰</p>
+      </>
+    )
+  }
+
   return (
     <>
       <Image
@@ -29,12 +46,11 @@ const profilePane = () => {
         path={'profile.jpg'}
         style="circular"
       />
-      <h1>Rasmus Ladefoged</h1>
-      <p>Full Stack Developer</p>
-      <p>🎈Copenhagen Denmark🇩🇰</p>
+      {information()}
       {renderLinks()}
+      
     </>
   );
 };
 
-export default profilePane;
+export default ProfilePane;

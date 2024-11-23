@@ -95,7 +95,7 @@ html, body {
 
 /* Styles for the stationary pane */
 .pane-stationary {
-  width: 30%; /* Fixed width for stationary pane */
+  width: 25%; /* Fixed width for stationary pane */
   flex-shrink: 0; /* Prevent shrinking */
   overflow: hidden; /* Prevents scrolling */
   height: 100%; /* Fills the height of split-container */
@@ -161,3 +161,4 @@ html, body {
   margin-top: 10px;
   text-align: left;
 }
+

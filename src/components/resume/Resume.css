@@ -3,7 +3,8 @@
 .work-experience,
 .about-me,
 .education,
-.projects-section{
+.projects-section,
+.experience{
   padding: 20px;
   background-color: #242424;
   color: #d7d6d6;
@@ -16,20 +17,16 @@
 .work-experience h2,
 .about-me h2,
 .education h2,
-.projects-section h2 {
+.projects-section h2,
+.experience h2 {
   font-size: 2.5rem;
   color: #b85c0b;
   margin-bottom: 20px;
+  margin-top: -10px;
   border-bottom: 2px solid #b85c0b;
   padding-bottom: 10px;
 }
 
-/* Job container */
-.job ,
-.degree
-.project{
-  margin-bottom: 30px;
-}
 
 /* Secondary header */
 .job h3,
@@ -74,7 +71,6 @@
 .responsibilities,
 .courses{
 list-style-type: disc;
-margin-left: 20px;
 
 }
 .project-features{
@@ -137,14 +133,14 @@ color: #b0b0b0;
   object-fit: contain;
 }
 
-.pickle-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 .github-project-link {
   display: flex;
   align-items: center; /* Center the icon vertically */
   justify-content: center;
+}
+
+.technical-skills {
+  font-size: 1.2rem;
+  margin-left: -30px;
 }

@@ -7,6 +7,9 @@ const menuPane = () => {
             <a href="#about">About Me</a>
           </li>
           <li>
+            <a href="#experience">Technical Skills</a>
+          </li>
+          <li>
             <a href="#work">Work Experience</a>
           </li>
           <li>
