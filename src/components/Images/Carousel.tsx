@@ -32,13 +32,19 @@ function Carousel({ slides }: { slides: string[] }) {
       </button>)
   }
 
-  return (
-    <div className="carousel-container">
-      <div className="slides-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+  const slidesContainer = () =>{
+    return (
+        <div className="slides-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {slides.map((slide, index) => (
           <img key={index} src={slide} className="slide" alt={`Slide ${index}`} />
         ))}
       </div>
+    )
+  }
+
+  return (
+    <div className="carousel-container">
+      {slidesContainer()}
       {leftButton()}
       {rightButton()}
       <div className="dot-container">

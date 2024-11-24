@@ -1,34 +1,28 @@
-import React from "react";
-import WorkExperience from "./WorkExperience";
-import About from "./About";
-import Education from "./Education";
-import Projects from "./Projects";
-import Experience from "./Experience";
+import React from 'react'
+import WorkExperience from './workExperience'
+import About from './about'
+import Education from './Education'
+import Projects from './Projects'
+import Experience from './Experience'
+import { motion } from 'framer-motion';
 
-interface ResumeProps {
+interface ResumeProps{
   setCurrentPage: (page: string) => void;
 }
 
-const ResumePane = ({ setCurrentPage }: ResumeProps) => {
+const ResumePane = ({setCurrentPage}: ResumeProps) => {
+
+
   return (
     <div className="pane pane-scrollable">
-      <div className="section">
-        <About />
-      </div>
-      <div className="section">
-        <Experience setCurrentPage={setCurrentPage} />
-      </div>
-      <div className="section">
-        <WorkExperience />
-      </div>
-      <div className="section">
-        <Projects setCurrentPage={setCurrentPage} />
-      </div>
-      <div className="section">
-        <Education />
-      </div>
-    </div>
-  );
-};
 
-export default ResumePane;
+        <About/>
+        <Experience setCurrentPage={setCurrentPage}/>
+        <WorkExperience/>
+        <Projects setCurrentPage={setCurrentPage}/>
+        <Education/>
+      </div>
+  )
+}
+
+export default ResumePane

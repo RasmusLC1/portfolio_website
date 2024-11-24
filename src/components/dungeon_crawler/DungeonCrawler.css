@@ -1,33 +1,102 @@
-.dungeonCrawler {
+/* Reset default margins and paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;  
+  }
+  
+  /* Content container that includes the menu pane and main content */
+  .content-container {
+    height: 100vh; /* Full viewport height */
+    overflow-y: scroll; /* Enable vertical scrolling */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;  
-    height: 100vh;     
-    padding: 20px;
-  scroll-snap-type: y mandatory;
+    flex-direction: column; /* Stack sections vertically */
+    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+    scroll-behavior: smooth; /* Smooth scrolling between sections */
+}
+/* Menu pane at the top */
+.pane-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #242424;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    z-index: 999; /* Ensure it sits above other content */
+    padding: 10px 0;
+  }
+  
+  /* Style the menu */
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 0 15px;
+  }
+  
+  .menu a {
+    color: #d7d6d6;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .menu a:hover {
+    color: #b85c0b;
+    transform: scale(1.2);
+  }
 
-  }
-  
-  .max-w-lg {
-    width: 100%;
-    max-width: 768px;  
-    margin-bottom: 20px;
-  }
-  
-  .additional-content {
-    width: 100%;
-    max-width: 768px;
-    background: #333;   
-    color: #fff;     
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .section {
-    height: 100vh; /* Ensures each section is exactly the height of the viewport */
+.section{
+    height: 100vh;
     scroll-snap-align: start;
-    margin: 0; /* Removes default margins */
-    padding: 0; /* Adjust padding if necessary, but be cautious */
-  }
-  
+}
+
+
+/* Container that holds the side-by-side panes */
+.split-container {
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start; 
+    justify-content: center;
+    width: 100%;
+    height: 100vh; 
+    box-sizing: border-box;
+    padding-top: 200px; 
+    gap: 20px; 
+    scroll-snap-type: mandatory;
+}
+
+/* Code display section */
+.code_test {
+    width: 50%; /* Width of the code container */
+    height: 700px; /* Fixed height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: stretch; /* Stretch to fill width */
+    justify-content: flex-start; /* Align content to the top */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding for readability */
+    overflow: auto; /* Enable scrolling for overflow */
+    scroll-snap-type: mandatory; /* Enable scroll snapping */
+}
+
+
+/* Carousel section */
+.carousel {
+    width: 50%; 
+    height: auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+    scroll-snap-type: mandatory;
+}

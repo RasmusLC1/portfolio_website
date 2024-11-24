@@ -103,7 +103,7 @@ html, body {
 
 /* Styles for the scrollable pane */
 .pane-scrollable{
-  /* flex-grow: 1; Grow to fill the remaining space */
+  flex-grow: 1; /* Grow to fill the remaining space */
   overflow-y: auto; /* Enables vertical scrolling */
   overflow-x: hidden;
   height: 100%; /* Fills the height of split-container */
