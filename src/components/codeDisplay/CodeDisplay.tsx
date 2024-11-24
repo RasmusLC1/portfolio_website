@@ -1,26 +1,30 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import "./CodeDisplay.css"
+import './CodeDisplay.css';
 
 interface Props {
-    codeString: string
+  codeString: string;
 }
 
+const CodeDisplay = ({ codeString }: Props) => {
+  const customStyle = {
+    fontSize: '1.2rem',
+    lineHeight: '1.2',
+    fontFamily: "'Courier New', Courier, monospace",
+    color: '#fff', // Ensure text color is set
+  };
 
-const CodeDisplay = ({codeString}: Props) => {
-
-    const customStyle = {
-        fontSize: '20px',
-        lineHeight: '1.2'
-      };
-      
   return (
-    <div className = "codeHighlight">
-    <SyntaxHighlighter language="python" style={vscDarkPlus}
-    customStyle={customStyle}>
-      {codeString}
-    </SyntaxHighlighter>
+    <div className="codeHighlight">
+      <SyntaxHighlighter
+        language="python"
+        style={vscDarkPlus}
+        codeTagProps={{ style: customStyle }}
+        showLineNumbers={true} // Optional: show line numbers
+      >
+        {codeString}
+      </SyntaxHighlighter>
     </div>
   );
 };

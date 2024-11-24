@@ -13,6 +13,7 @@ html, body {
     flex-direction: column; /* Stack sections vertically */
     scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
     scroll-behavior: smooth; /* Smooth scrolling between sections */
+    scroll-snap-type: mandatory;
 }
 /* Menu pane at the top */
 .pane-menu {
@@ -53,27 +54,27 @@ html, body {
     transform: scale(1.2);
   }
 
-.section{
+  .section {
     height: 100vh;
     scroll-snap-align: start;
+    position: relative; /* Ensure child elements are positioned relative to this container */
 }
 
 .headline {
     display: flex;
-    position: fixed;
     justify-content: center;
-    top: 100px;
-    left: 0;
+    position: sticky;
+    top: 100px; /* Adjust this value to control when the headline sticks */
     width: 100%;
-    height: 90px;
-  }
+    height: 50px;
+    z-index: 1; /* Ensure the headline appears above other content */
+}
 
-  .headline h2 {
+.headline h2 {
     font-size: 2.5rem;
     color: #b85c0b;
-    margin-bottom: 20px;
     margin-top: -10px;
-  }
+}
   
 
 /* Container that holds the side-by-side panes */
@@ -85,9 +86,8 @@ html, body {
     width: 100%;
     height: 100vh; 
     box-sizing: border-box;
-    padding-top: 200px; 
+    padding-top: 100px; 
     gap: 20px; 
-    scroll-snap-type: mandatory;
 }
 
 /* Code display section */
@@ -101,11 +101,13 @@ html, body {
     color: white; /* Text color */
     padding: 10px; /* Add padding for readability */
     overflow: auto; /* Enable scrolling for overflow */
-    scroll-snap-type: mandatory; /* Enable scroll snapping */
 
 }
 
-
+/* Shift content to the right when burger menu is open */
+.content-container.menu-open {
+    transform: translateX(200px); /* Adjust based on burger menu width */
+  }
 
 
 /* Carousel section */
@@ -117,7 +119,6 @@ html, body {
     justify-content: flex-start;
     overflow: hidden;
     flex-direction: column;
-    scroll-snap-type: mandatory;
     padding-top: 10px;
     font-size: 1rem;
     
@@ -137,5 +138,7 @@ html, body {
     border-radius: 10px; /* Rounds the corners */
     padding: 10px; /* Adds space inside the container, around the content */
     width: 50%;
+  margin-top: 30px;
+
 }
 

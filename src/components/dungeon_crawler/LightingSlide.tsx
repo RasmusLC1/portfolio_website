@@ -89,7 +89,7 @@ const text = () => {
 
 
   return (
-    <div className="section">
+    <div  id = "lighting" className="section">
       <div className="headline">
         <h2>LIGHTING</h2>
       </div>
@@ -98,7 +98,6 @@ const text = () => {
           <Carousel slides={slides} />
           {text()}
         </div>
-
         <div className="code">
           <CodeDisplay codeString={codeString} />
         </div>

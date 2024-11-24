@@ -1,9 +1,7 @@
-import React from 'react';
-import Carousel from '../Images/Carousel';
+
 import './DungeonCrawler.css'; // Import the CSS file
-import CodeDisplay from '../codeDisplay/CodeDisplay';
-import { code } from 'framer-motion/client';
-import menuPane from '../MenuPane';
+import MenuPaneDungeonCrawler from "./menuPaneDungeonCrawler";
+import LevelGeneration from './LevelGeneration';
 import LightingSlide from './LightingSlide';
 
 const DungeonCrawler = () => {
@@ -12,11 +10,12 @@ const DungeonCrawler = () => {
     return (
       <div id="Dungeon Crawler">
         <div className="pane-menu">
-          {menuPane()} {/* Menu component */}
+          {MenuPaneDungeonCrawler()}
         </div>
 
         <div className="content-container">
           {LightingSlide()}
+          {LevelGeneration()}
           </div>
           </div>
           

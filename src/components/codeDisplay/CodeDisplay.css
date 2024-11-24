@@ -1,25 +1,25 @@
 /* Code container for snippets */
-/* Code container for snippets */
 .codeHighlight {
-    width: 100%; /* Full width of the code pane */
-    white-space: pre-wrap; /* Enable wrapping of long lines */
-    word-wrap: break-word; /* Allow breaking of long words */
-    overflow-wrap: break-word; /* Ensures wrapping for overflowing text */
-    overflow-y: auto; /* Allow vertical scrolling for large code blocks */
-    padding: 10px; /* Add some padding for readability */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
-    font-size: 20px; /* Set desired font size */
-    line-height: 1.2; /* Adjust line height to reduce spacing between lines */
-    color: #fff; /* Code text color */
-    background-color: #1e1e1e; /* Optional: VSCode-style dark background */
-    border-radius: 4px; /* Optional: Rounded edges */
-    box-sizing: border-box; /* Ensure padding is included in dimensions */
-    height: 100%; /* Ensure the code block fills the available space */
-}
-
-
-/* Optional highlight class for code syntax */
-.codeHighlight {
-    font-weight: bold;
-    color: #ffcc00; /* Example for highlights */
-}
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+    border-radius: 4px;
+  }
+  
+  /* Optional: Style the pre element inside SyntaxHighlighter */
+  .codeHighlight pre {
+    margin: 0;
+    background: none; /* Prevents background duplication */
+  }
+  
+  /* Optional: Ensure the code element takes full width */
+  .codeHighlight code {
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
