@@ -35,16 +35,17 @@
     transform: rotate(-45deg) translate(7px, -6px);
   }
   
-  .menu-items {
-    position: absolute;
-    top: 40px;
-    width: 200px;
-    height: 2000px;
-    left: 0;
-    background-color: #242424;
-    border-radius: 5px;
-    overflow: hidden;
-  }
+.menu-items {
+  position: absolute;
+  top: 40px;
+  width: 200px;
+  height: 1000px; /* Set the height to 100px */
+  left: 0;
+  background-color: #242424;
+  overflow: hidden; /* Hide overflow */
+  overflow-y: hidden;
+
+}
   
   .menu-items ul {
     list-style: none;

@@ -1,4 +1,4 @@
-import Image from './Image';
+import Image from './Images/Image';
 import GitHubLink from './links/githubLink';
 import EmailLink from './links/emailLink';
 import LinkedInLink from './links/linkedinLink';

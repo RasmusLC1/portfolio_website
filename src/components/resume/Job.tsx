@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../Image";
+import Image from "../Images/Image";
 import AppleLink from "../links/appleLink";
 import MicrosoftLink from "../links/microsoftLink";
 import GoogleLink from "../links/GoogleLink";

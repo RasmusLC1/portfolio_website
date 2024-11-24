@@ -1,0 +1,64 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden; /* Ensures only one image is visible at a time */
+    width: 100%;
+    height: auto; /* Adjust this height based on your preference */
+    margin: 0 auto; /* Centers the carousel horizontally */
+    top: 20%;
+
+  }
+  
+  .slides-container {
+    display: flex;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .slide {
+    min-width: 100%; /* Each slide should be the full width of the carousel */
+    height: 100%; /* Full height of the carousel */
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .nav-button.left {
+    left: 10px;
+  }
+  
+  .nav-button.right {
+    right: 10px;
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .dot-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  
+  

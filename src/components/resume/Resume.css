@@ -81,6 +81,34 @@ color: #b0b0b0;
 
 }
 
+.project-language-item {
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;  /* Adequate padding */
+  margin: 4px;
+  background: #595858;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 2rem;  /* Fixed height */
+  overflow: hidden;  /* Hides any overflow */
+  white-space: nowrap;
+  vertical-align:middle;  /* Aligns image with the text vertically */
+}
+
+.project-language-item img {
+  width: 20px;  /* Fixed width for images */
+  height: auto;  /* Maintain aspect ratio */
+  vertical-align: middle;  /* Align images to the middle */
+  margin-right: 8px;  /* Space between image and text */
+}
+
+.project-language-item:hover {
+  background-color: #aeaeae;  /* Color change on hover */
+  transform: scale(1.1);
+
+}
+
 .courses li{
   margin-bottom: 5px;
   line-height: 2;
@@ -141,6 +169,6 @@ color: #b0b0b0;
 }
 
 .technical-skills {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-left: -30px;
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from '../Image';
+import Image from '../Images/Image';
 
 interface Props {
   link: string; // Email address to link to

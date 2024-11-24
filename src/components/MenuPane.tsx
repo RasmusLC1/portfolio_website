@@ -1,4 +1,7 @@
+import { useRef } from "react";
+
 const menuPane = () => {
+
     return (
       <div className="pane pane-menu">
       <nav className="menu">
@@ -18,7 +21,6 @@ const menuPane = () => {
           <li>
             <a href="#education">Education</a>
           </li>
-          {/* Add more menu items as needed */}
         </ul>
       </nav>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Resume.css';
 
 
@@ -7,7 +7,7 @@ const About = () => {
     <div id="about" className="about-me">
       <h2>ABOUT ME</h2>
       <p className="about-me-body">
-        28-year-old and a recent graduate with a Bachelor's degree in Computer Science from Copenhagen University.
+        Recent graduate with a Bachelor's degree in Computer Science from Copenhagen University.
       </p>
       <p className="about-me-body">
         I have four years of IT experience from working in Ireland and three years of programming experience from my studies and personal projects.

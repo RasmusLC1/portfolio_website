@@ -1,0 +1,33 @@
+.dungeonCrawler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;  
+    height: 100vh;     
+    padding: 20px;
+  scroll-snap-type: y mandatory;
+
+  }
+  
+  .max-w-lg {
+    width: 100%;
+    max-width: 768px;  
+    margin-bottom: 20px;
+  }
+  
+  .additional-content {
+    width: 100%;
+    max-width: 768px;
+    background: #333;   
+    color: #fff;     
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    height: 100vh; /* Ensures each section is exactly the height of the viewport */
+    scroll-snap-align: start;
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Adjust padding if necessary, but be cautious */
+  }
+  

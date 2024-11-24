@@ -3,7 +3,8 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* Prevent scrolling on the body */
+  overflow-y: hidden;
+
 }
 
 /* Content container that includes the menu pane and main content */
@@ -18,7 +19,7 @@ html, body {
 
 /* Shift content to the right when burger menu is open */
 .content-container.menu-open {
-  transform: translateX(250px); /* Adjust based on burger menu width */
+  transform: translateX(200px); /* Adjust based on burger menu width */
 }
 
 /* Burger menu styles */
@@ -36,6 +37,7 @@ html, body {
   left: 0;
   width: 100%;
   background-color: #242424;
+  scroll-behavior: smooth;
   box-sizing: border-box;
   z-index: 999; /* Ensure it sits above other content */
   padding: 10px 0;
@@ -74,8 +76,9 @@ html, body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin-top: 60px; /* Adjust based on the height of pane-menu */
-  overflow: hidden; /* Prevent scrolling on the main content */
+  margin-top: 60px; 
+  overflow: hidden; 
+  overflow-y: hidden;
 }
 
 /* Container that holds the side-by-side panes */
@@ -86,34 +89,29 @@ html, body {
   width: 100%;
 }
 
-/* Common styles for panes */
-.pane {
-  background-color: #242424;
-  padding: 20px;
-  box-sizing: border-box;
-}
 
 /* Styles for the stationary pane */
 .pane-stationary {
-  width: 25%; /* Fixed width for stationary pane */
+  width: 35%; /* Fixed width for stationary pane */
   flex-shrink: 0; /* Prevent shrinking */
   overflow: hidden; /* Prevents scrolling */
-  height: 100%; /* Fills the height of split-container */
+  height: 90%; /* Fills the height of split-container */
+  display: flex; /* Makes it a flex container */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column; /* Stacks children vertically */
 }
 
 /* Styles for the scrollable pane */
-.pane-scrollable {
-  flex-grow: 1; /* Grow to fill the remaining space */
+.pane-scrollable{
+  /* flex-grow: 1; Grow to fill the remaining space */
   overflow-y: auto; /* Enables vertical scrolling */
   overflow-x: hidden;
   height: 100%; /* Fills the height of split-container */
+  scroll-behavior: smooth;
 }
 
-/* Remove unnecessary margins */
-.pane-stationary,
-.pane-scrollable {
-  margin: 0;
-}
+
+
 
 /* Responsive layout for smaller screens */
 @media (max-width: 768px) {
@@ -122,11 +120,13 @@ html, body {
   }
 
   .pane-stationary,
-  .pane-scrollable {
+  .pane-scrollable{
     width: 100%;
     height: auto; /* Adjust height for stacked layout */
+    scroll-behavior: smooth;
   }
 }
+
 
 /* Image styles */
 .rounded-image {

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../Image";
+import Image from "../Images/Image";
 
 interface LanguageProps {
   library: string;
@@ -8,9 +8,10 @@ interface LanguageProps {
 const Libraries = ({ library }: LanguageProps) => {
   const pygameLogo = (
     <span className="company-logo">
-      <Image className="img-fluid pygame-img" path={"pygame.png"} />
+      <Image className="img-fluid pygame-img" path="pygame.png" width="1.2rem" height="auto" />
     </span>
   );
+  
 
   const numpyLogo = (
     <svg
@@ -238,7 +239,7 @@ const Libraries = ({ library }: LanguageProps) => {
   const getTechLogo = () => {
     switch (library) {
       case "Pygame":
-        return pygameLogo;
+        return null;
       case "Numpy":
         return numpyLogo;
       case "MPFR":

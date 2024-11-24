@@ -9,8 +9,8 @@ interface ResumeProps{
 const Experience = ({setCurrentPage}: ResumeProps) => {
     const experience = {
         title: '',
-        language: ["Python", "C#", "JavaScript", "TypeScript", "CSS", "HTML"],
-        libraries: ["React", "Express", "Bootstrap", ".NET", "Numpy", "GNU", "Pygame"],
+        language: ["Python", "C#", "JavaScript", "TypeScript", "C", "CSS"],
+        libraries: ["React", "Express", "Bootstrap", ".NET", "Numpy", "GNU"],
         technologies: ["Node.js", "Vite", "ESLint", "JSON", "check"],
         period: '',
         github: "",
@@ -21,7 +21,7 @@ const Experience = ({setCurrentPage}: ResumeProps) => {
   return (
     <div id="experience" className="experience">
       <h2>TECHNICAL SKILLS</h2>
-      <Project project={experience} projectName='technical-skills' setCurrentPage={setCurrentPage}/>
+      <Project project={experience} projectName='technical-skills' setCurrentPage={setCurrentPage} techLink = {true}/>
     </div>
   );
 };

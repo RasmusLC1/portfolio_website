@@ -40,7 +40,7 @@ function App() {
       case 'frontPage':
         return frontPage();
       case 'Dungeon Crawler':
-        return <DungeonCrawler />;
+        return DungeonCrawler();
       case 'Polynomial Multiplication':
         return <PolynomialMultiplication />;
       case 'Recipe Web App':
