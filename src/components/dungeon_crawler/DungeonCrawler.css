@@ -21,8 +21,6 @@ html, body {
     left: 0;
     width: 100%;
     background-color: #242424;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
     z-index: 999; /* Ensure it sits above other content */
     padding: 10px 0;
   }
@@ -60,6 +58,23 @@ html, body {
     scroll-snap-align: start;
 }
 
+.headline {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+  }
+
+  .headline h2 {
+    font-size: 2.5rem;
+    color: #b85c0b;
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+  
 
 /* Container that holds the side-by-side panes */
 .split-container {
@@ -76,9 +91,9 @@ html, body {
 }
 
 /* Code display section */
-.code_test {
-    width: 50%; /* Width of the code container */
-    height: 700px; /* Fixed height */
+.code {
+    width: 40%; /* Width of the code container */
+    height: 80vh; /* Fixed height */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack children vertically */
     align-items: stretch; /* Stretch to fill width */
@@ -87,16 +102,40 @@ html, body {
     padding: 10px; /* Add padding for readability */
     overflow: auto; /* Enable scrolling for overflow */
     scroll-snap-type: mandatory; /* Enable scroll snapping */
+
 }
+
+
 
 
 /* Carousel section */
-.carousel {
+.display {
     width: 50%; 
-    height: auto; 
+    height: 100vh; 
     display: flex; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-start;
     overflow: hidden;
+    flex-direction: column;
     scroll-snap-type: mandatory;
+    padding-top: 10px;
+    font-size: 1rem;
+    
 }
+
+
+.text {
+    display: flex;  /* Enables flexbox properties */
+    flex-direction: column; /* Aligns children elements vertically */
+    align-items: flex-start; /* Aligns children items to the start (left) */
+    justify-content: flex-start; /* Aligns container content to the start vertically (top) */
+    text-align: left; /* Aligns text inside the flex container to the left */
+    font-size: 1.2rem;
+    width: 400px;
+    height: auto;
+    background-color: #3b3b3b;
+    border-radius: 10px; /* Rounds the corners */
+    padding: 10px; /* Adds space inside the container, around the content */
+    width: 50%;
+}
+
