@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Project from './Project';
+import ProgrammingLanguageLogos from '../links/ProgrammingLanguageLogos';
 
 interface ResumeProps{
     setCurrentPage: (page: string) => void;
@@ -46,14 +47,86 @@ const Projects = ({setCurrentPage}: ResumeProps) => {
         features: "Learning full stack web development by building an interactive web app with backend support",
       };
 
+  const [activeProject, setActiveProject] = useState(0)
+
+  const dungeonCrawlerButton = () => {
+    return (
+      <button
+        className={`ProjectButton ${activeProject === 0 ? 'active' : ''}`}
+        onClick={() => setActiveProject(0)}
+      >
+      Dungeon Crawler <ProgrammingLanguageLogos language="Python" />
+
+      </button>
+    );
+  };
+
+  const polynomialMultiplicationButton = () => {
+    return (
+      <button
+        className={`ProjectButton ${activeProject === 1 ? 'active' : ''}`}
+        onClick={() => setActiveProject(1)}
+      >
+        Polynomial Multiplication <ProgrammingLanguageLogos language="C" />
+      </button>
+    );
+  };
+
+  const recipePageAppButton = () => {
+    return (
+      <button
+        className={`ProjectButton ${activeProject === 2 ? 'active' : ''}`}
+        onClick={() => setActiveProject(2)}
+      >
+        Recipe Page <ProgrammingLanguageLogos language="TypeScript" />
+      </button>
+    );
+  };
+
+  const wolfensteinRendererButton = () => {
+    return (
+      <button
+        className={`ProjectButton ${activeProject === 3 ? 'active' : ''}`}
+        onClick={() => setActiveProject(3)}
+      >
+        Wolfenstein Renderer <ProgrammingLanguageLogos language="C#" />
+      </button>
+    );
+  };
+
+  const selectProjectButtons = () => {
+    return(
+      <div className = "selectProjectButtons">
+        {dungeonCrawlerButton()}
+        {polynomialMultiplicationButton()}
+        {recipePageAppButton()}
+        {wolfensteinRendererButton()}  
+</div>
+    )
+  }
+    
+  const renderActiveProject = () => {
+
+    switch(activeProject){
+      case 0:
+       return <Project project={dungeonCrawler} setCurrentPage={setCurrentPage}/>
+      case 1:
+        return <Project project={polynomialMultiplication} setCurrentPage={setCurrentPage}/>
+      case 2:
+        return <Project project={recipePage} setCurrentPage={setCurrentPage}/>
+      case 3:
+        return <Project project={WolfensteinRenderer} setCurrentPage={setCurrentPage}/>
+      default:
+       return null
+    }
+
+  }
 
   return (
     <div id="projects"  className = "projects-section">
         <h2>PROJECTS</h2>
-        <Project project={dungeonCrawler} setCurrentPage={setCurrentPage}/>
-        <Project project={polynomialMultiplication} setCurrentPage={setCurrentPage}/>
-        <Project project={recipePage} setCurrentPage={setCurrentPage}/>
-        <Project project={WolfensteinRenderer} setCurrentPage={setCurrentPage}/>
+        {selectProjectButtons()}
+        {renderActiveProject()}
     </div>
   )
 }

@@ -45,7 +45,7 @@ const Project: React.FC<ProjectProps> = ({
         return "Recipe Web App";
       case "C":
         return "Polynomial Multiplication";
-      case "REACT":
+      case "React":
         return "Recipe Web App";
       case "Express":
         return "Recipe Web App";

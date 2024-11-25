@@ -40,7 +40,7 @@ const MenuPane = ({ setshowEducation, setScrollRequested, scrollRequested }: Men
         className="menuButton"
         onClick={() => {
           setshowEducation(false);
-          setScrollRequested(!scrollRequested);
+          setScrollRequested(true);
         }}
       >
         Work Experience
@@ -54,7 +54,7 @@ const MenuPane = ({ setshowEducation, setScrollRequested, scrollRequested }: Men
         className="menuButton"
         onClick={() => {
           setshowEducation(true);
-          setScrollRequested(!scrollRequested);
+          setScrollRequested(true);
         }}
       >
         Education

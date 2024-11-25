@@ -4,9 +4,10 @@ interface Props {
   link: string;
   size?: string;
   className?: string;
+  showLink?: boolean;
 }
 
-const GitHubLink = ({ link, size = "32", className = "link-container"}: Props) => {
+const GitHubLink = ({ link, size = "32", className = "link-container", showLink = false}: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -16,7 +17,7 @@ const GitHubLink = ({ link, size = "32", className = "link-container"}: Props) =
         target="_blank"
         rel="noopener noreferrer"
         className="github-link"
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseEnter={() => showLink && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <svg

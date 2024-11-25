@@ -8,6 +8,7 @@
   background-color: #242424;
   color: #d7d6d6;
   font-family: 'Arial', sans-serif;
+  width: 60%;
 }
 
 
@@ -78,6 +79,7 @@ list-style-type: disc;
 width: 400px;
 font-size: 1.2rem;
 color: #b0b0b0;
+margin-bottom: 100px;
 
 }
 
@@ -171,19 +173,12 @@ color: #b0b0b0;
   margin-left: -30px;
 }
 
-/* Container for the toggle buttons */
-.toggle-button-education-works {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
 /* Wrapper for buttons and slider */
 .toggle-button-education-works-container {
   position: relative;
   display: flex;
   width: 100%; /* Adjust as needed */
-  max-width: 600px; /* Adjust as needed */
+  max-width: 400px; /* Adjust as needed */
   height: 60px; /* Set height to match button size */
   background-color: #595858; /* Background for the container */
   border-radius: 8px; /* Rounded corners */
@@ -223,7 +218,7 @@ color: #b0b0b0;
   border: none;
   padding: 0; /* Remove padding to align text */
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
   text-align: center;
   line-height: 60px; /* Match the container height for vertical centering */
@@ -245,3 +240,29 @@ color: #b0b0b0;
 }
 
 
+.ProjectButton {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  background-color: #595858; /* Default background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+}
+
+.ProjectButton:hover {
+  background-color: #707070; /* Slightly lighter on hover */
+}
+
+.ProjectButton.active {
+  background-color: #b85c0b; /* Orange color for active button */
+  color: black;              /* Optional: Change text color when active */
+}
+
+.ProjectButton svg {
+  vertical-align: text-top;
+  margin-left: 2px; /* Space between text and icon */
+  flex-shrink: 0; /* Prevents the icon from shrinking */
+}

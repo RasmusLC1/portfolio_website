@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, } from 'react';
 import WorkExperience from './WorkExperience';
 import About from './About';
 import Education from './Education';
@@ -19,14 +19,17 @@ const ResumePane: React.FC<ResumeProps> = ({
   showEducation,
   setshowEducation,
   scrollRequested,
-  
+  setScrollRequested
 
 }) => {
 
 
 
   useEffect(() => {
-    document.getElementById('workeducation')?.scrollIntoView({ behavior: 'smooth' });
+    if (scrollRequested){
+      document.getElementById('workeducation')?.scrollIntoView({ behavior: 'smooth' });
+      setScrollRequested(false)
+    }
   }, [scrollRequested]);
   
 
@@ -91,8 +94,8 @@ const ResumePane: React.FC<ResumeProps> = ({
   return (
     <div className="pane pane-scrollable">
         <About />
-      {workAndEducation()}
         <Experience setCurrentPage={setCurrentPage} />
+      {workAndEducation()}
         <Projects setCurrentPage={setCurrentPage} />
     </div>
   );

@@ -10,6 +10,7 @@ import RecipeApp from "./components/recipe_app/RecipeApp";
 import "./App.css";
 import "./components/links/links.css";
 
+
 function App() {
   const [currentPage, setCurrentPage] = useState("frontPage");
   const [isMenuOpen, setIsMenuOpen] = useState(false);

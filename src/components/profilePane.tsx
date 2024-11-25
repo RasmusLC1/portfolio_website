@@ -24,7 +24,7 @@ const ProfilePane = ({setCurrentPage}: ProfileProps) => {
     return (
         
       <div className="links-container">
-        <GitHubLink link={githubURL} />
+        <GitHubLink link={githubURL} size = "32" className = "link-container" showLink = {true} />
         <LinkedInLink link={linkedinhubURL} />
         <EmailLink link={emailURL} />
         <ResumeLink link = {resumeURL}/>
