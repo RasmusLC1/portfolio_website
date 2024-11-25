@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "../Images/Carousel";
 import CodeDisplay from "../codeDisplay/CodeDisplay";
 import { code } from "framer-motion/client";
-import menuPane from "../MenuPane";
+import MenuPane from "../MenuPane";
 
 const LightingSlide = () => {
   const slides = [

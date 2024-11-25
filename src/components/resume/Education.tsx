@@ -44,8 +44,7 @@ const Education = () => {
   };
 
   return (
-    <div id="education" className="education">
-      <h2>Education</h2>
+    <div className="education">
       <Degree degree={KUCompsci} />
     </div>
   );

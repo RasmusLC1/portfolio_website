@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   height: 100%;
   overflow-y: hidden;
+  font-family: 'DM Sans', sans-serif; 
 
 }
 
@@ -78,7 +79,7 @@ html, body {
   overflow: hidden;
   margin-top: 0; /* Ensure there's no margin pushing it down */
   padding-top: 0; /* Ensure there's no padding at the top */
-  margin-top: -100px;
+  margin-top: 0px;
 }
 
 /* Container that holds the side-by-side panes */
@@ -163,3 +164,23 @@ html, body {
   text-align: left;
 }
 
+.menuButton {
+  font-size: 1.3rem;
+  outline: none; /* Remove default outline */
+  border: none; /* Optional: Remove default border if present */
+  background: none; /* Optional: Remove default background if present */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover state */
+.menuButton:hover {
+  color: #b85c0b;
+  /* No outline needed here */
+}
+
+
+/* Active state (when the button is being clicked) */
+.menuButton:active {
+  /* Optional: Styles when the button is active */
+  outline: none; /* Remove outline if desired */
+}

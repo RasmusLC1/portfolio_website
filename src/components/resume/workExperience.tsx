@@ -47,8 +47,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <div id="work" className="work-experience">
-      <h2>WORK EXPERIENCE</h2>
+    <div className="work-experience">
       <Job job={LanguageWire} />
       <Job job={Apple} />
       <Job job={Accenture} />

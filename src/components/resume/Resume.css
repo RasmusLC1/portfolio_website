@@ -1,8 +1,6 @@
 
 /* Main container */
-.work-experience,
 .about-me,
-.education,
 .projects-section,
 .experience{
   padding: 20px;
@@ -82,25 +80,23 @@ color: #b0b0b0;
 }
 
 .project-language-item {
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;  /* Adequate padding */
+  align-items: center; /* Vertically center items */
+  padding: 4px 8px;
   margin: 4px;
   background: #595858;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  height: 2rem;  /* Fixed height */
-  overflow: hidden;  /* Hides any overflow */
+  height: 2rem;
+  overflow: hidden;
   white-space: nowrap;
-  vertical-align:middle;  /* Aligns image with the text vertically */
 }
 
-.project-language-item img {
-  width: 20px;  /* Fixed width for images */
-  height: auto;  /* Maintain aspect ratio */
-  vertical-align: middle;  /* Align images to the middle */
-  margin-right: 8px;  /* Space between image and text */
+
+.project-language-item svg {
+  vertical-align: text-top;
+  margin-left: 2px; /* Space between text and icon */
+  flex-shrink: 0; /* Prevents the icon from shrinking */
 }
 
 .project-language-item:hover {
@@ -172,3 +168,78 @@ color: #b0b0b0;
   font-size: 1.4rem;
   margin-left: -30px;
 }
+
+/* Container for the toggle buttons */
+.toggle-button-education-works {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Wrapper for buttons and slider */
+.toggle-button-education-works-container {
+  position: relative;
+  display: flex;
+  width: 100%; /* Adjust as needed */
+  max-width: 600px; /* Adjust as needed */
+  height: 60px; /* Set height to match button size */
+  background-color: #595858; /* Background for the container */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  margin-top: 20px;
+
+}
+
+/* The sliding background bar */
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Half the container width */
+  height: 100%;
+  background-color: #b85c0b; /* Orange color */
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+/* Slider positions */
+.toggle-slider.left {
+  transform: translateX(0%);
+}
+
+.toggle-slider.right {
+  transform: translateX(100%);
+}
+
+/* Style for individual toggle buttons */
+.toggle-button-education-work {
+  position: relative;
+  z-index: 1; /* Place above the slider */
+  flex: 1; /* Equal width for buttons */
+  background: transparent; /* Transparent to show slider */
+  color: white;
+  border: none;
+  padding: 0; /* Remove padding to align text */
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  text-align: center;
+  line-height: 60px; /* Match the container height for vertical centering */
+}
+
+/* Active button text color */
+.toggle-button-education-work.active {
+  color: black; /* Black text over orange slider */
+}
+
+/* Optional hover effect */
+.toggle-button-education-work:hover {
+  transform: scale(1.05);
+}
+
+/* Remove default button focus outline */
+.toggle-button-education-work:focus {
+  outline: none;
+}
+
+
