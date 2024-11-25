@@ -1,8 +1,11 @@
-import Image from './Images/Image';
+import ImportImage from './Images/ImportImage';
 import GitHubLink from './links/githubLink';
 import EmailLink from './links/emailLink';
 import LinkedInLink from './links/linkedinLink';
 import ResumeLink from './links/resumeLink';
+
+import profilePicture from '../assets/pictures/profile.jpg'; // Import the image
+
 
 interface ProfileProps{
   setCurrentPage: (page: string) => void;
@@ -41,9 +44,9 @@ const ProfilePane = ({setCurrentPage}: ProfileProps) => {
 
   return (
     <>
-      <Image
+      <ImportImage
         className="img-fluid profile-picture"
-        path={'profile.jpg'}
+        src={profilePicture}
         style="circular"
       />
       {information()}

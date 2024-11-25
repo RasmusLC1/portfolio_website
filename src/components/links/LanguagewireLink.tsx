@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import Image from '../Images/Image';
+import ImportImage from '../Images/ImportImage';
+import lwLogo from '../../assets/pictures/languagewire.jpg'; // Import the image
+
 
 interface Props {
   link: string; 
@@ -14,7 +16,7 @@ const LanguageWireLink = ({ link }: Props) => {
       target="_blank"
       rel="noopener noreferrer"
       >
-         <Image className="img-fluid languagewire-img" path={"languagewire.jpg"} />
+         <ImportImage className="img-fluid languagewire-img" src={lwLogo} />
 
     </a>
       </span>

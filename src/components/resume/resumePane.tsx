@@ -19,6 +19,7 @@ const ResumePane: React.FC<ResumeProps> = ({
   showEducation,
   setshowEducation,
   scrollRequested,
+  
 
 }) => {
 
@@ -26,7 +27,7 @@ const ResumePane: React.FC<ResumeProps> = ({
 
   useEffect(() => {
     document.getElementById('workeducation')?.scrollIntoView({ behavior: 'smooth' });
-  }, [scrollRequested, setshowEducation]);
+  }, [scrollRequested]);
   
 
   const handleWorkButtonClick = (state: boolean) => {
@@ -65,6 +66,8 @@ const ResumePane: React.FC<ResumeProps> = ({
           <CSSTransition
             key={showEducation ? 'education' : 'work'}
             classNames="slide"
+            timeout={100} 
+
             unmountOnExit
             mountOnEnter
           >
@@ -75,20 +78,22 @@ const ResumePane: React.FC<ResumeProps> = ({
     );
   };
   
+  const workAndEducation = () => {
+    return (
+      <div id="workeducation" className='work-education'>
+      <h2>WORK AND EDUCATION</h2>
+      {toggleButtons()}
+      {workEducationTransition()}
+      </div>
+    )
+  }
 
   return (
     <div className="pane pane-scrollable">
-      <div id="about">
         <About />
-      </div>
-      {toggleButtons()}
-      {workEducationTransition()}
-      <div id="experience">
+      {workAndEducation()}
         <Experience setCurrentPage={setCurrentPage} />
-      </div>
-      <div id="projects">
         <Projects setCurrentPage={setCurrentPage} />
-      </div>
     </div>
   );
 };

@@ -2,7 +2,8 @@
 /* Main container */
 .about-me,
 .projects-section,
-.experience{
+.experience,
+.work-education{
   padding: 20px;
   background-color: #242424;
   color: #d7d6d6;
@@ -16,7 +17,8 @@
 .about-me h2,
 .education h2,
 .projects-section h2,
-.experience h2 {
+.experience h2,
+.work-education h2{
   font-size: 2.5rem;
   color: #b85c0b;
   margin-bottom: 20px;
