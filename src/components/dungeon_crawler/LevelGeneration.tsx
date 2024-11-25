@@ -1,7 +1,5 @@
-import React from "react";
-import Carousel from "../Images/Carousel";
-import CodeDisplay from "../codeDisplay/CodeDisplay";
-import { code } from "framer-motion/client";
+import SlideTemplate from "./SlideTemplate";
+
 
 const LevelGeneration = () => {
   const slides = [
@@ -65,6 +63,48 @@ def Create_Map(self):
                       map[i][j] = value_1 
 
 ###################################
+# Customise the internal map structure
+    def Generate_Map(self):
+        self.Delete_Map_File('data/maps/0.json')
+        self.tilemap.Clear_Tilemap()
+        self.cellular_automata.Create_Map()
+
+
+        self.Spawn_Lakes(7, floor, lava)
+
+        
+        self.a_star.Setup_Custom_Map(self.cellular_automata.map, self.cellular_automata.size_x, self.cellular_automata.size_y)
+
+        self.Player_Spawn()
+        self.a_star.Set_Map('custom')
+        self.Spawn_Traps(1)
+        # Spawn more loot rooms in lower levels of dungeon
+        # TODO: PROPER LEVEL SYSTEM
+        temp_level = 5
+        if not self.Spawn_Loot_Room(temp_level):
+            self.Generate_Map()
+            return
+        
+        self.Spawn_Boss_Room()
+
+        self.a_star.Setup_Custom_Map(self.cellular_automata.map, self.cellular_automata.size_x, self.cellular_automata.size_y)
+
+        self.a_star.Set_Map('custom')
+
+        # Call itself recursively and generate a new map if it fails to spawn enemies
+        if not self.Enemy_Spawner():
+            self.Generate_Map()
+            return
+
+        self.Spawn_Chest(2)
+
+        self.Level_Structure()
+    
+
+        self.tilemap.save('data/maps/0.json')
+
+
+
 # Example of spawning structures inside the map
 def Room_Structure_Circle(self, center_x, center_y, radius):
     door_array = [1, 2, 3, 4]
@@ -87,41 +127,27 @@ def Room_Structure_Circle(self, center_x, center_y, radius):
                 self.cellular_automata.map[x][y] = wall
 `;
 
-const text = () => {
-    return (
-      <div className = "text">
-        <p className="description">
-          Dynamic lighting engine that interacts with enemy AI and affects the player's vision
-        </p>
-        <ul className="features"> {/* Corrected usage of ul for list items */}
-          <li>Raycaster based lighting system</li>
-          <li>Precomputed angles for optimisation</li>
-          <li>Tile check for error handling and performance improvement</li>
-          <li>Check for nearby lights to only update relevant light sources</li>
-          <li>Only update lights on trigger for performance</li>
-        </ul>
-      </div>
-    );
-  };
+const description = (<div className = "text">
+  <p className="description">
+    Random level generation using cellular automata and refined with random structures and elements
+  </p>
+  <ul className="features"> {/* Corrected usage of ul for list items */}
+    <li>First generate a random noisemap with 1 and 0 to represent walls and floors</li>
+    <li>Second refine the noise map using cellular automata to generate the dungeon layout</li>
+    <li>Third spawns structures and entities within the cellular automata</li>
+    <li>Fourth check that critical structures and enemies can pathfind to the player to prevent unreachable objects</li>
   
+  </ul>
+</div>)
 
 
   return (
-    <div id = "levelgeneration" className="section">
-        <div  className="headline">
-          <h2>LEVEL GENERATION</h2>
-        </div>
-      <div className="split-container">
-        <div className="display">
-          <Carousel slides={slides} />
-          {text()}
-        </div>
-
-        <div className="code">
-          <CodeDisplay codeString={codeString} />
-        </div>
-      </div>
-    </div>
+    <SlideTemplate
+      headline="LEVEL GENERATOR"
+      description={description}
+      codeString={codeString}
+      slides={slides}
+    />
   );
 };
 

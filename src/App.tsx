@@ -12,7 +12,7 @@ import "./components/links/links.css";
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("frontPage");
+  const [currentPage, setCurrentPage] = useState("Dungeon Crawler");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showEducation, setshowEducation] = useState(false);
   const [scrollRequested, setScrollRequested] = useState(false);

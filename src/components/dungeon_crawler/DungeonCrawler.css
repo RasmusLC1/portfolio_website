@@ -1,20 +1,16 @@
-/* Reset default margins and paddings */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;  
-  }
-  
+
   /* Content container that includes the menu pane and main content */
   .content-container {
-    height: 100vh; /* Full viewport height */
-    overflow-y: scroll; /* Enable vertical scrolling */
+    height: 100vh;
+    overflow-y: scroll;
     display: flex;
-    flex-direction: column; /* Stack sections vertically */
-    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
-    scroll-behavior: smooth; /* Smooth scrolling between sections */
-    scroll-snap-type: mandatory;
-}
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    
+  }
+
+
 /* Menu pane at the top */
 .pane-menu {
     position: fixed;
@@ -142,3 +138,8 @@ html, body {
 
 }
 
+.features,
+.description{
+    font-size: 1rem;
+    margin-bottom: 1px;
+}

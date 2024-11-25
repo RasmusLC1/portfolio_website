@@ -1,17 +1,11 @@
-import React from "react";
-import Carousel from "../Images/Carousel";
-import CodeDisplay from "../codeDisplay/CodeDisplay";
-import { code } from "framer-motion/client";
-import MenuPane from "../MenuPane";
+import SlideTemplate from "./SlideTemplate";
+
 
 const LightingSlide = () => {
   const slides = [
-    `/pictures/game/spawn.png`,
-    `/pictures/game/chest.png`,
-    `/pictures/game/item_drop.png`,
-    `/pictures/game/pickup.png`,
-    `/pictures/game/equip.png`,
-    `/pictures/game/attack.png`,
+    `/pictures/game/light/torchlight.png`,
+    `/pictures/game/light/pickinguptorch.png`,
+    `/pictures/game/light/torchequip.png`,
   ];
 
   const codeString = `
@@ -69,39 +63,30 @@ def Move_Light(self, pos, light_source, tile):
         light.Setup_Tile_Light()  # Recalculate the light for the nearby light sources
 `;
 
-const text = () => {
-    return (
-      <div className = "text">
-        <p className="description">
-          Dynamic lighting engine that interacts with enemy AI and affects the player's vision
-        </p>
-        <ul className="features"> {/* Corrected usage of ul for list items */}
-          <li>Raycaster based lighting system</li>
-          <li>Precomputed angles for optimisation</li>
-          <li>Tile check for error handling and performance improvement</li>
-          <li>Check for nearby lights to only update relevant light sources</li>
-          <li>Only update lights on trigger for performance</li>
-        </ul>
-      </div>
-    );
-  };
+const description = (<div className = "text">
+    <p className="description">
+      Dynamic lighting engine that interacts with enemy AI and affects the player's vision
+    </p>
+    <ul className="features"> {/* Corrected usage of ul for list items */}
+      <li>Raycaster based lighting system</li>
+      <li>Precomputed angles for optimisation</li>
+      <li>Tile check for error handling and performance improvement</li>
+      <li>Check for nearby lights to only update relevant light sources</li>
+      <li>Only update lights on trigger for performance</li>
+    </ul>
+  </div>)
   
 
 
   return (
     <div  id = "lighting" className="section">
-      <div className="headline">
-        <h2>LIGHTING</h2>
-      </div>
-      <div className="split-container">
-        <div className="display">
-          <Carousel slides={slides} />
-          {text()}
-        </div>
-        <div className="code">
-          <CodeDisplay codeString={codeString} />
-        </div>
-      </div>
+
+    <SlideTemplate
+      headline="LIGHTING ENGINE"
+      description={description}
+      codeString={codeString}
+      slides={slides}
+    />
     </div>
   );
 };

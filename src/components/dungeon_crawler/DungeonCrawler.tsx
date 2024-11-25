@@ -3,6 +3,8 @@ import './DungeonCrawler.css'; // Import the CSS file
 import MenuPaneDungeonCrawler from "./menuPaneDungeonCrawler";
 import LevelGeneration from './LevelGeneration';
 import LightingSlide from './LightingSlide';
+import InventorySystem from './InventorySystem';
+import Weapons from './Weapons';
 
 const DungeonCrawler = () => {
   
@@ -14,8 +16,10 @@ const DungeonCrawler = () => {
         </div>
 
         <div className="content-container">
-          {LightingSlide()}
           {LevelGeneration()}
+          {LightingSlide()}
+          {InventorySystem()}
+          {Weapons()}
           </div>
           </div>
           

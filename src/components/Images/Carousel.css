@@ -64,7 +64,7 @@
 }
 
 .nav-button.right {
-    right: 80px;
+    right: 0px;
 }
 
 /* Dots for navigation */
@@ -72,6 +72,7 @@
     position: absolute;
     bottom: 10px;
     width: 100%;
+    top: 10px;
     text-align: center;
 }
 

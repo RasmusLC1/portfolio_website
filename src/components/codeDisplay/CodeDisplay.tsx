@@ -21,7 +21,6 @@ const CodeDisplay = ({ codeString }: Props) => {
         language="python"
         style={vscDarkPlus}
         codeTagProps={{ style: customStyle }}
-        showLineNumbers={true} // Optional: show line numbers
       >
         {codeString}
       </SyntaxHighlighter>
