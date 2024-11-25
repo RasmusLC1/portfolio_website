@@ -152,15 +152,14 @@ const description = (<div className = "text">
 
 
   return (
-    <div  id = "lighting" className="section">
 
     <SlideTemplate
+    id = "weapons" 
       headline="WEAPONS"
       description={description}
       codeString={codeString}
       slides={slides}
     />
-    </div>
   );
 };
 

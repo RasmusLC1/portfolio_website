@@ -3,13 +3,14 @@ import Carousel from "../Images/Carousel";
 import CodeDisplay from "../codeDisplay/CodeDisplay";
 
 interface SlideTemplateProps {
+    id: string;
   headline: string;
   description: React.ReactNode; // Updated to accept JSX
   codeString: string;
   slides: string[];
 }
 
-const SlideTemplate = ({ headline, description, codeString, slides }: SlideTemplateProps) => {
+const SlideTemplate = ({ id, headline, description, codeString, slides }: SlideTemplateProps) => {
     
     const renderHeadline = () => {
         return (
@@ -21,7 +22,7 @@ const SlideTemplate = ({ headline, description, codeString, slides }: SlideTempl
 const renderDisplay = () => {
     return (<div className="split-container">
         <div className="display">
-          <Carousel slides={slides} />
+          <Carousel slides={slides}  />
           {description}
         </div>
         <div className="code">
@@ -31,7 +32,7 @@ const renderDisplay = () => {
     )
 }
   return (
-    <div id="levelgeneration" className="section">
+    <div id= {id} className="section">
       {renderHeadline()}
       {renderDisplay()}
 

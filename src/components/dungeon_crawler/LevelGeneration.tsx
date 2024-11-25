@@ -136,13 +136,15 @@ const description = (<div className = "text">
     <li>Second refine the noise map using cellular automata to generate the dungeon layout</li>
     <li>Third spawns structures and entities within the cellular automata</li>
     <li>Fourth check that critical structures and enemies can pathfind to the player to prevent unreachable objects</li>
-  
+
   </ul>
 </div>)
 
 
   return (
+
     <SlideTemplate
+    id = "levelgeneration"
       headline="LEVEL GENERATOR"
       description={description}
       codeString={codeString}

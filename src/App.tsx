@@ -48,7 +48,7 @@ function App() {
       case "frontPage":
         return frontPage();
       case "Dungeon Crawler":
-        return DungeonCrawler();
+        return <DungeonCrawler setCurrentPage={setCurrentPage}/>;
       case "Polynomial Multiplication":
         return <PolynomialMultiplication />;
       case "Recipe Web App":

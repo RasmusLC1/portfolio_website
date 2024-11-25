@@ -1,30 +1,48 @@
 import { useRef } from "react";
 
-const MenuPaneDungeonCrawler = () => {
+interface MenuProps {
+  setCurrentPage: (page: string) => void;
+}
 
-    return (
-      <div className="pane pane-menu">
+const MenuPaneDungeonCrawler = ({ setCurrentPage }: MenuProps) => {
+  return (
+    <div className="pane pane-menu">
       <nav className="menu">
         <ul>
           <li>
-            <a href="#lighting">Lighting</a>
+            <a href="#introduction">Introduction</a>
           </li>
           <li>
             <a href="#levelgeneration">Level Generation</a>
           </li>
           <li>
-            <a href="#work">Work Experience</a>
+            <a href="#enemies">Enemies</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#lighting">Lighting</a>
           </li>
           <li>
-            <a href="#education">Education</a>
+            <a href="#inventory">Inventory</a>
+          </li>
+          <li>
+            <a href="#weapons">Weapons</a>
+          </li>
+          <li>
+            <a href="#runes">Runes</a>
+          </li>
+          <li>
+            <a
+              href="#"
+              onClick={() => setCurrentPage("frontPage")}
+              className="front-page-link"
+            >
+              Front Page
+            </a>
           </li>
         </ul>
       </nav>
     </div>
-    );
-  };
+  );
+};
 
 export default MenuPaneDungeonCrawler;

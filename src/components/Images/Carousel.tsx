@@ -40,6 +40,7 @@ function Carousel({ slides }: { slides: string[] }) {
       >
         {slides.map((slide, index) => (
           <div key={index} className="slide">
+            
             <img src={slide} alt={`Slide ${index}`} />
           </div>
         ))}

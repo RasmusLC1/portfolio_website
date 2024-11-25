@@ -2,22 +2,38 @@ import React from "react";
 
 interface ImageProps {
   className: string;
-  path?: string; // Image filename, e.g., "pygame.png"
-  style?: string; // Styling class suffix, e.g., "rounded"
-  width?: string; // Width of the image
-  height?: string; // Height of the image
+  path?: string;
+  style?: string;
+  width?: string; 
+  height?: string;
+  clickable?: boolean;
 }
 
-const Image = ({ className, path, style = "rounded", width, height }: ImageProps) => {
+const Image = ({ className, path, style = "rounded", width, height, clickable = false }: ImageProps) => {
   const imagePath = `../../public/pictures/${path}`;
-  return (
+  const fullResolutionPath = `../../public/pictures/${path}`; 
+  
+  const clickablePicture = () => (
+    <a href={fullResolutionPath} target="_blank" rel="noopener noreferrer">
+      <img
+        src={imagePath}
+        className={`${className} ${style}-image`}
+        alt="" 
+        style={{ width: width, height: height }}
+      />
+    </a>
+  );
+
+  const notClickablePicture = () => (
     <img
       src={imagePath}
-      className={`${className} ${style}-image`}
-      alt="" // Optional: add a meaningful description
-      style={{ width: width, height: height }} // Inline styles for width and height
+      className={`${className} ${style}-image`} 
+      alt="" 
+      style={{ width: width, height: height }}
     />
   );
+
+  return clickable ? clickablePicture() : notClickablePicture(); 
 };
 
 export default Image;

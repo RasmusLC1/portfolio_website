@@ -50,6 +50,17 @@
     transform: scale(1.2);
   }
 
+  .menu a.front-page-link {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #b85c0b; /* Set font color to orange */
+  }
+
+  .menu a.front-page-link:hover{
+    color: #d7d6d6;
+    transform: scale(1.2);
+  }
+
   .section {
     height: 100vh;
     scroll-snap-align: start;
@@ -80,10 +91,11 @@
     align-items: flex-start; 
     justify-content: center;
     width: 100%;
-    height: 100vh; 
+    height: 90vh; 
     box-sizing: border-box;
     padding-top: 100px; 
     gap: 20px; 
+    margin-bottom: 10vh;
 }
 
 /* Code display section */
@@ -128,13 +140,14 @@
     justify-content: flex-start; /* Aligns container content to the start vertically (top) */
     text-align: left; /* Aligns text inside the flex container to the left */
     font-size: 1.2rem;
-    width: 400px;
     height: auto;
     background-color: #3b3b3b;
     border-radius: 10px; /* Rounds the corners */
     padding: 10px; /* Adds space inside the container, around the content */
-    width: 50%;
-  margin-top: 30px;
+    width: 60%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  overflow-y: auto;
 
 }
 
@@ -143,3 +156,41 @@
     font-size: 1rem;
     margin-bottom: 1px;
 }
+
+
+.introduction {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+    background-image: url('/pictures/game/enemies/differentenemies.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Make it the containing block for the pseudo-element */
+    margin-bottom: 10%;
+}
+
+.introduction::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black mesh with 50% opacity */
+    z-index: 1; /* Place the mesh above the background */
+}
+
+.introduction .techsection {
+    position: relative;
+    z-index: 2; /* Ensure content is above the mesh */
+}
+
+.techsection {
+    height: 45vh;
+    width: auto;
+    border-width: 4px;
+    padding: 10px; /* Adds spacing inside the border */
+}
+

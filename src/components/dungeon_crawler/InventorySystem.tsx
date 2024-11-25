@@ -105,12 +105,15 @@ const description = (<div className = "text">
 
 
   return (
+
     <SlideTemplate
-      headline="INVENTORY SYSTEM"
+    id = "inventory"
+      headline="INVENTORY"
       description={description}
       codeString={codeString}
       slides={slides}
     />
+
   );
 };
 
