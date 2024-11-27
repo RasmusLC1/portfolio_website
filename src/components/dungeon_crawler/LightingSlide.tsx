@@ -88,6 +88,7 @@ const description = (
       headline="LIGHTING ENGINE"
       description={description}
       codeString={codeString}
+      language = "python"
       slides={slides}
     />
   );

@@ -4,9 +4,10 @@ import './CodeDisplay.css';
 
 interface Props {
   codeString: string;
+  language: string;
 }
 
-const CodeDisplay = ({ codeString }: Props) => {
+const CodeDisplay = ({ codeString, language}: Props) => {
   const customStyle = {
     fontSize: '1.2rem',
     lineHeight: '1.2',
@@ -17,7 +18,7 @@ const CodeDisplay = ({ codeString }: Props) => {
   return (
     <div className="codeHighlight">
       <SyntaxHighlighter
-        language="python"
+        language= {language}
         style={vscDarkPlus}
         codeTagProps={{ style: customStyle }}
       >

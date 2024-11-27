@@ -98,13 +98,13 @@ html, body {
 
 /* Styles for the stationary pane */
 .pane-stationary {
-  width: 35%; /* Fixed width for stationary pane */
-  flex-shrink: 0; /* Prevent shrinking */
-  overflow: hidden; /* Prevents scrolling */
-  height: 90%; /* Fills the height of split-container */
-  display: flex; /* Makes it a flex container */
-  align-items: center; /* Centers content vertically */
-  flex-direction: column; /* Stacks children vertically */
+  width: 35%; 
+  flex-shrink: 0;
+  overflow: hidden; 
+  height: auto; 
+  display: flex; 
+  align-items: center; 
+  flex-direction: column; 
 }
 
 /* Styles for the scrollable pane */
@@ -190,4 +190,9 @@ html, body {
 .menuButton:active {
   /* Optional: Styles when the button is active */
   outline: none; /* Remove outline if desired */
+}
+
+
+.resume-link{
+  fill: white
 }

@@ -158,6 +158,7 @@ const description = (
       headline="WEAPONS"
       description={description}
       codeString={codeString}
+      language = "python"
       slides={slides}
     />
   );

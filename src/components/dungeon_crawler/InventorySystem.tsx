@@ -113,6 +113,7 @@ const description = (
       headline="INVENTORY"
       description={description}
       codeString={codeString}
+      language = "python"
       slides={slides}
     />
 

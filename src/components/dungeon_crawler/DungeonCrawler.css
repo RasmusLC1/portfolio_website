@@ -94,7 +94,7 @@
   
 
 /* Container that holds the side-by-side panes */
-.split-container-dungeoncrawler {
+.split-container-slides {
   display: flex; 
   flex-direction: row; 
   align-items: flex-start; 
@@ -153,7 +153,7 @@
     width: 60%;
     height: 25%;
     margin-bottom: 10px;
-    margin-top: -10px;
+    margin-top: 20px;
     overflow-y: auto;
     overflow-x: hidden;
 }

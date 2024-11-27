@@ -1,12 +1,13 @@
 import SlideTemplate from "../dungeon_crawler/SlideTemplate";
+import './RecipeApp.css'
 
 
 const Recipes = () => {
     const slides = [
-        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/create recipe.png`, description: 'Ability to add recipes'},
-        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/recipeadded.png`, description: 'Recipe added, can be removed with the x button'},
-        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/thumbnail.png`, description: 'Recipes can have thumbnails for visual design'},
-        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/multiplerecipes.png`, description: 'Multiple recipes can be added and stored in memory with JSON'},
+        {image: `${import.meta.env.BASE_URL}/pictures/recipeapp/create recipe.png`, description: 'Ability to add recipes'},
+        {image: `${import.meta.env.BASE_URL}/pictures/recipeapp/recipeadded.png`, description: 'Recipe added, can be removed with the x button'},
+        {image: `${import.meta.env.BASE_URL}/pictures/recipeapp/thumbnail.png`, description: 'Recipes can have thumbnails for visual design'},
+        {image: `${import.meta.env.BASE_URL}/pictures/recipeapp/multiplerecipes.png`, description: 'Multiple recipes can be added and stored in memory with JSON'},
       ];
 
 
@@ -115,6 +116,7 @@ const description = (
       <ul className="features">
         <li>Recipes have a name and a thumbnail</li>
         <li>Internal memory of ingredients and images</li>
+        <li>Recipes can be removed one by one or all at once</li>
       </ul>
     </div>
   );
@@ -129,6 +131,7 @@ const description = (
       headline="RECIPES"
       description={description}
       codeString={codeString}
+      language = "typescript"
       slides={slides}
     />
   );

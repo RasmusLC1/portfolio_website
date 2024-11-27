@@ -9,8 +9,8 @@ const Experience = ({setCurrentPage}: ResumeProps) => {
     const experience = {
         title: '',
         language: ["Python", "C#", "JavaScript", "TypeScript", "C", "CSS"],
-        libraries: ["React", "Express", "Bootstrap", ".NET", "Numpy", "GNU"],
-        technologies: ["Node.js", "Azure", "Vite", "ESLint", "JSON", "check"],
+        libraries: ["React", ".NET", "Numpy", "GNU"],
+        technologies: ["Node.js", "Git", "Azure", "PostgreSQL", "JSON"],
         period: '',
         github: "",
         features: "",

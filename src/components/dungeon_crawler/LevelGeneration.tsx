@@ -150,6 +150,7 @@ const description = (
       headline="LEVEL GENERATOR"
       description={description}
       codeString={codeString}
+      language = "python"
       slides={slides}
     />
   );

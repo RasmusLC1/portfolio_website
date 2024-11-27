@@ -7,6 +7,7 @@ interface SlideTemplateProps {
   headline: string;
   description: React.ReactNode; // JSX content for description
   codeString: string;
+  language: string;
   slides: { image: string; description: string }[];
 }
 
@@ -15,6 +16,7 @@ const SlideTemplate = ({
   headline,
   description,
   codeString,
+  language,
   slides,
 }: SlideTemplateProps) => {
   const renderHeadline = () => (
@@ -24,13 +26,13 @@ const SlideTemplate = ({
   );
 
   const renderDisplay = () => (
-    <div className="split-container-dungeoncrawler">
+    <div className="split-container-slides">
       <div className="display">
         <Carousel slides={slides} /> {/* Pass the entire slides array */}
         {description}
       </div>
       <div className="code">
-        <CodeDisplay codeString={codeString} />
+        <CodeDisplay codeString={codeString} language = {language} />
       </div>
     </div>
   );
