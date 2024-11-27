@@ -13,62 +13,42 @@
 
 /* Menu pane at the top */
 .pane-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #242424;
-  z-index: 999; /* Ensure it sits above other content */
-  padding: 10px 0;
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center the menu */
-  align-items: center;
-  position: relative; /* Needed for absolute positioning of Front Page link */
-}
-
-/* Position the Front Page link */
-.pane-menu .front-page-link {
-  position: absolute;
-  left: 20px; /* Adjust spacing from the left edge */
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #b85c0b; /* Set font color to orange */
-  text-decoration: none;
-}
-
-.pane-menu .front-page-link:hover {
-  color: #d7d6d6;
-  transform: scale(1.2);
-}
-
-/* Style the menu */
-.menu {
-  display: flex;
-  justify-content: center;
-}
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  margin: 0 15px;
-}
-
-.menu a {
-  color: #d7d6d6;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.menu a:hover {
-  color: #b85c0b;
-  transform: scale(1.2);
-}
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #242424;
+    z-index: 999; /* Ensure it sits above other content */
+    padding: 10px 0;
+  }
+  
+  /* Style the menu */
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 0 15px;
+  }
+  
+  .menu a {
+    color: #d7d6d6;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .menu a:hover {
+    color: #b85c0b;
+    transform: scale(1.2);
+  }
 
   .menu a.front-page-link {
     font-size: 1.8rem;
@@ -79,10 +59,6 @@
   .menu a.front-page-link:hover{
     color: #d7d6d6;
     transform: scale(1.2);
-  }
-
-  .front-page-link{
-    margin-left: 10%;
   }
 
   .section {
@@ -164,13 +140,13 @@
   justify-content: flex-start; /* Aligns container content to the start vertically (top) */
   text-align: left; /* Aligns text inside the flex container to the left */
   font-size: 1.2rem;
-  height: 20%; /* Set a fixed height */
+  height: 25%; /* Set a fixed height */
   background-color: #3b3b3b;
   border-radius: 10px; /* Rounds the corners */
   padding: 10px; /* Adds space inside the container, around the content */
   width: 60%;
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   overflow-y: auto; /* Enables vertical scrolling when content exceeds the height */
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
@@ -183,12 +159,12 @@
 }
 
 
-.introduction-dungeoncrawler {
+.introduction-recipeapp {
     margin-top: 5%;
     display: flex;
     justify-content: center;
     height: 95vh;
-    background-image: url('/pictures/game/enemies/differentenemies.png');
+    background-image: url('/pictures/recipeapp/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -196,18 +172,18 @@
     margin-bottom: 10%;
 }
 
-.introduction-dungeoncrawler::before {
+.introduction-recipeapp::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Black mesh with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* Black mesh with 50% opacity */
     z-index: 1; /* Place the mesh above the background */
 }
 
-.introduction-dungeoncrawler .techsection {
+.introduction-recipeapp .techsection {
     position: relative;
     z-index: 2; /* Ensure content is above the mesh */
 }
@@ -219,6 +195,3 @@
     padding: 10px; /* Adds spacing inside the border */
 }
 
-.frontpagebutton{
-  justify-content: left;
-}

@@ -3,20 +3,11 @@ interface MenuProps {
   setCurrentPage: (page: string) => void;
 }
 
-const MenuPaneDungeonCrawler = ({ setCurrentPage }: MenuProps) => {
+const MenuPaneRecipeApp = ({ setCurrentPage }: MenuProps) => {
   return (
     <div className="pane pane-menu">
-      <a
-        href="#"
-        onClick={() => setCurrentPage("frontPage")}
-        className="front-page-link"
-      >
-        Front Page
-      </a>
       <nav className="menu">
         <ul>
-        <li className = "frontpagebutton">
-          </li>
           <li>
             <a href="#introduction">Introduction</a>
           </li>
@@ -38,11 +29,19 @@ const MenuPaneDungeonCrawler = ({ setCurrentPage }: MenuProps) => {
           <li>
             <a href="#runes">Runes</a>
           </li>
-          
+          <li>
+            <a
+              href="#"
+              onClick={() => setCurrentPage("frontPage")}
+              className="front-page-link"
+            >
+              Front Page
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
   );
 };
 
-export default MenuPaneDungeonCrawler;
+export default MenuPaneRecipeApp;

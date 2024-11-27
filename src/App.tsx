@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProfilePane from "./components/profilePane";
 import ResumePane from "./components/resume/ResumePane";
 import MenuPane from "./components/MenuPane";
@@ -12,7 +12,7 @@ import "./components/links/links.css";
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("Dungeon Crawler");
+  const [currentPage, setCurrentPage] = useState("frontPage");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showEducation, setshowEducation] = useState(false);
   const [scrollRequested, setScrollRequested] = useState(false);
@@ -21,12 +21,12 @@ function App() {
     return (
       <div className={`content-container ${isMenuOpen ? "menu-open" : ""}`}>
         <div className="pane-menu">
-          <MenuPane setshowEducation = {setshowEducation} setScrollRequested = {setScrollRequested} scrollRequested = {scrollRequested}/>
+          <MenuPane setshowEducation = {setshowEducation} setScrollRequested = {setScrollRequested}/>
         </div>
         <div className="main-content">
           <div className="split-container">
             <div className="pane pane-stationary">
-              <ProfilePane setCurrentPage={setCurrentPage} />
+              <ProfilePane  />
             </div>
             <div className="pane pane-scrollable">
               <ResumePane
@@ -52,7 +52,7 @@ function App() {
       case "Polynomial Multiplication":
         return <PolynomialMultiplication />;
       case "Recipe Web App":
-        return <RecipeApp />;
+        return <RecipeApp setCurrentPage={setCurrentPage}/>;
       case "Wolfenstein Renderer":
         return <WolfenSteinRenderer />;
       default:

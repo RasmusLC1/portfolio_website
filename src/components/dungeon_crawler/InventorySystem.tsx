@@ -5,12 +5,12 @@ const InventorySystem = () => {
 
 
   const slides = [
-      `/pictures/game/inventorysystem/itemonground.png`,
-      `/pictures/game/inventorysystem/iteminventory.png`,
-      `/pictures/game/inventorysystem/dragitem.png`,
-    `/pictures/game/inventorysystem/weaponequipped.png`,
-    `/pictures/game/inventorysystem/fullinventory.png`,
-    `/pictures/game/inventorysystem/tooltip.png`,
+      {image: `/pictures/game/inventorysystem/itemonground.png`, description: 'Item on the ground'},
+      {image: `/pictures/game/inventorysystem/iteminventory.png`, description: 'Item in inventory'},
+      {image: `/pictures/game/inventorysystem/dragitem.png`, description: 'Dragging item around'},
+    {image: `/pictures/game/inventorysystem/weaponequipped.png`, description: 'Weapon in equipped inventory slot'},
+    {image: `/pictures/game/inventorysystem/fullinventory.png`, description: ' items stacks when picked up and the inventory can be filled'},
+    {image: `/pictures/game/inventorysystem/tooltip.png`, description: 'Each item has a auto generated tooltip'},
   ];
 
   const codeString = `
@@ -90,18 +90,20 @@ def __init__(self, game, pos, size, item, index, key = None):
     self.saved_data = {}
 `;
 
-const description = (<div className = "text">
-  <p className="description">
-    All items inherit from the same base class and can interract with the inventory system in different ways depending on their properties
-  </p>
-  <ul className="features"> {/* Corrected usage of ul for list items */}
-    <li>Items can be added to 3 inventories, items, runes and equipped weapons inventory</li>
-    <li>Items check for other items in the inventory they can merge with</li>
-    <li>Items can be dragged and placed on the tilemap</li>
-    <li>Items can be interacted with for various effects</li>
-    <li>Each item has a unique automatically generated tooltip</li>
-  </ul>
-</div>)
+const description = (
+  <div className="text">
+    <p className="description">
+      All items share a base class and interact with the inventory system based on their properties.
+    </p>
+    <ul className="features">
+      <li>Items can be added to one of three inventories: general items, runes, or equipped weapons.</li>
+      <li>Items check for other compatible items in the inventory and can merge with them.</li>
+      <li>Items can be dragged and placed onto the tilemap.</li>
+      <li>Items can be interacted with to trigger specific effects.</li>
+      <li>Each item has a unique tooltip that is automatically generated.</li>
+    </ul>
+  </div>
+);
 
 
   return (

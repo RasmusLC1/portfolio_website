@@ -1,5 +1,5 @@
-import React, { useState, useEffect, } from 'react';
-import WorkExperience from './WorkExperience';
+import React, { useEffect, } from 'react';
+import WorkExperience from './workExperience';
 import About from './About';
 import Education from './Education';
 import Projects from './Projects';

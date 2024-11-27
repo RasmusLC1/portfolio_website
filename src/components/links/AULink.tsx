@@ -1,11 +1,11 @@
 import ImportImage from '../Images/ImportImage';
-import kuLogo from '../../assets/pictures/ku_logo.jpg'; // Import the image
+import kuLogo from '../../assets/pictures/AU.png'; // Import the image
 
 interface Props {
   link: string; // Email address to link to
 }
 
-const KULink = ({ link }: Props) => {
+const AULink = ({ link }: Props) => {
   return (
     <span className="company-logo">
       <a href={link} target="_blank" rel="noopener noreferrer">
@@ -15,4 +15,4 @@ const KULink = ({ link }: Props) => {
   );
 };
 
-export default KULink;
+export default AULink;

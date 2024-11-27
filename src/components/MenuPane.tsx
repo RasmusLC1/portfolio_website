@@ -1,13 +1,11 @@
-import React from 'react';
 
 interface MenuPaneProps {
   setshowEducation: (state: boolean) => void;
   setScrollRequested: (state: boolean) => void;
-  scrollRequested: boolean;
   
 }
 
-const MenuPane = ({ setshowEducation, setScrollRequested, scrollRequested }: MenuPaneProps) => {
+const MenuPane = ({ setshowEducation, setScrollRequested }: MenuPaneProps) => {
   const aboutButton = () => (
     <li>
       <button

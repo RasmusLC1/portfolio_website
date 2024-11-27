@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "../Images/Image";
 import AppleLink from "../links/appleLink";
-import MicrosoftLink from "../links/microsoftLink";
+import MicrosoftLink from "../links/MicrosoftLink";
 import GoogleLink from "../links/GoogleLink";
-import LanguageWireLink from "../links/LanguageWireLink";
+import LanguageWireLink from "../links/LanguagewireLink";
 
 interface JobProps {
   job: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import KULink from '../links/KULink';
+import AULink from '../links/AULink';
 
 interface Course {
   course: string;
@@ -20,24 +21,20 @@ const Degree: React.FC<DegreeProps> = ({ degree }) => {
 
 
 
-  // Function to extract the university name (before the comma)
-  const getUniversityName = (fullUniversityName: string): string => {
-    return fullUniversityName.split(",")[0].trim().toLowerCase();
-  };
-
   // Function to get the logo based on the university name
-  const getLogoForUniversity = (universityName: string): JSX.Element | null => {
-    switch (universityName) {
-      case "copenhagen university":
-        return <KULink link = "https://www.ku.dk/en"/>;
+  const getLogoForUniversity = () => {
+    switch (university) {
+      case "Copenhagen University":
+        return <KULink link = "https://www.ku.dk/studies/bachelor/computer-science"/>;
+      case "Aarhus University":
+        return <AULink link = "https://bachelor.au.dk/filosofi"/>
       default:
-        console.log(universityName)
+        console.log(university)
         return null;
     }
   };
   
-  const universityName = getUniversityName(university);
-  const activeLogo = getLogoForUniversity(universityName);
+  const activeLogo = getLogoForUniversity();
 
 
   return (

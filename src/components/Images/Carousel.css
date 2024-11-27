@@ -1,91 +1,81 @@
-/* Carousel container */
 .carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 70%;
-    aspect-ratio: 16 / 12;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Slides container */
-  .slides-container {
-    display: flex;
-    transition: transform 0.5s ease-out;
-    height: 100%;
-    align-items: center;
-  }
-  
-  /* Individual slide */
-  .slide {
-    min-width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Remove margins and paddings */
-  .slide,
-  .slide img {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Navigation buttons and dots remain the same */
-  
-  /* Remove margins and paddings */
-  .slide,
-  .slide img {
-    margin: 0;
-    padding: 0;
-  }
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  height: 500px; /* Increased height to accommodate image and description */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* Navigation buttons */
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack image and description vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: calc(100% - 60px); /* Subtract the height of the description */
+  object-fit: contain;
+}
+
+.slide-description {
+  text-align: center;
+  font-size: 1rem;
+  color: #ddd;
+  margin: 10px 0;
+  padding: 0 10px;
+  height: 50px; /* Fixed height for consistency */
+  line-height: 1.2; /* Adjust line height as needed */
+}
+
 .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-    padding: 20px;
-    border-radius: 70%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 50%;
 }
 
 .nav-button.left {
-    left: 0px;
+  left: 10px;
 }
 
 .nav-button.right {
-    right: 0px;
+  right: 10px;
 }
 
 /* Dots for navigation */
 .dot-container {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    top: 10px;
-    text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .dot {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: #ddd;
-    margin: 0 5px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
-    background-color: #333;
+  background-color: #333;
 }

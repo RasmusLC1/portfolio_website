@@ -1,17 +1,10 @@
-import React from "react";
-import Image from "../Images/Image";
 
 interface LanguageProps {
   library: string;
 }
 
 const Libraries = ({ library }: LanguageProps) => {
-  const pygameLogo = (
-    <span className="company-logo">
-      <Image className="img-fluid pygame-img" path="pygame.png" width="1.2rem" height="auto" />
-    </span>
-  );
-  
+
 
   const numpyLogo = (
     <svg

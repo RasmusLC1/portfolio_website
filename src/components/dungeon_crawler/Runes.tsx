@@ -3,13 +3,13 @@ import SlideTemplate from "./SlideTemplate";
 
 const Runes = () => {
   const slides = [
-    `/pictures/game/runes/runeselection.png`,
-    `/pictures/game/runes/upgrading runes.png`,
-    `/pictures/game/runes/purchasebutton.png`,
-    `/pictures/game/runes/purchasedash.png`,
-    `/pictures/game/runes/dashbought.png`,
-    `/pictures/game/runes/dashinventory.png`,
-    `/pictures/game/runes/dash.png`,
+    {image: `/pictures/game/runes/runeselection.png`, description: ''},
+    {image: `/pictures/game/runes/upgrading runes.png`, description: ''},
+    {image: `/pictures/game/runes/purchasebutton.png`, description: ''},
+    {image: `/pictures/game/runes/purchasedash.png`, description: ''},
+    {image: `/pictures/game/runes/dashbought.png`, description: ''},
+    {image: `/pictures/game/runes/dashinventory.png`, description: ''},
+    {image: `/pictures/game/runes/dash.png`, description: ''}
   ];
 
   const codeString = `
@@ -113,18 +113,21 @@ def Replace_Rune(self, rune_to_replace):
 
 `;
 
-const description = (<div className = "text">
+const description = (
+  <div className="text">
     <p className="description">
-      Magic system tied to upgradable and interchangeable runes for dynamic gameplay
+      A magic system based on upgradable and interchangeable runes for flexible gameplay.
     </p>
     <ul className="features">
-      <li>Runes require souls, which are obtained by killing enemies</li>
-      <li>Different runes with different effects, including resistances, offensive power, terrain interaction and player movement</li>
-      <li>Runes can be upgraded or bought from shrines in boss rooms</li>
-      <li>Runes can be moved in the rune inventory to use different hotkeys</li>
-      <li>Runes are items to interract with the rune inventory, but blacklisted from item inventory</li>
+      <li>Runes require souls, which are collected by defeating enemies.</li>
+      <li>Different runes provide unique effects, such as resistances, offensive abilities, terrain interaction, and enhanced player movement.</li>
+      <li>Runes can be upgraded or purchased at shrines located in boss rooms.</li>
+      <li>Runes can be rearranged in the rune inventory to assign them to different hotkeys.</li>
+      <li>Runes are treated as items for the rune inventory but are excluded from the general item inventory.</li>
     </ul>
-  </div>)
+  </div>
+);
+
   
 
 

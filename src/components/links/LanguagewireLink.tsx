@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import ImportImage from '../Images/ImportImage';
 import lwLogo from '../../assets/pictures/languagewire.jpg'; // Import the image
 

@@ -1,13 +1,14 @@
 
 import './DungeonCrawler.css'; // Import the CSS file
-import MenuPaneDungeonCrawler from "./menuPaneDungeonCrawler";
+import MenuPaneDungeonCrawler from './MenuPaneDungeonCrawler';
 import LevelGeneration from './LevelGeneration';
 import LightingSlide from './LightingSlide';
 import InventorySystem from './InventorySystem';
 import Weapons from './Weapons';
 import Runes from './Runes';
-import Enemies from './enemies';
+import Enemies from './Enemies';
 import Introduction from './Introduction';
+import './DungeonCrawler.css'
 
 interface DungeonProps{
   setCurrentPage: (page: string) => void;

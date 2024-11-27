@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Project from '../resume/Project'
 const Introduction = () => {
 
@@ -13,7 +13,7 @@ const Introduction = () => {
         github: "https://github.com/RasmusLC1/Dungeon-Crawler",
         features: "This page showcases some key features from this project which you can see below",
       };
-    
+    console.log(temp)
     const techSection = () => {
         return (<div className='techsection'>
             <Project project={dungeonCrawler} setCurrentPage={setTemp}/>
@@ -22,7 +22,7 @@ const Introduction = () => {
 
   return (
     <div id = "introduction" className='section'>
-    <div  className='introduction'>
+    <div  className='introduction-dungeoncrawler'>
         
         {techSection()}
     </div>

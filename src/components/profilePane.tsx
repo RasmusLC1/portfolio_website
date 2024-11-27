@@ -7,11 +7,7 @@ import ResumeLink from './links/resumeLink';
 import profilePicture from '../assets/pictures/profile.jpg'; // Import the image
 
 
-interface ProfileProps{
-  setCurrentPage: (page: string) => void;
-}
-
-const ProfilePane = ({setCurrentPage}: ProfileProps) => {
+const ProfilePane = () => {
   const githubURL = 'https://github.com/RasmusLC1';
   const linkedinhubURL = 'https://www.linkedin.com/in/rcarlsen853/';
   const emailURL = 'rasmus.lc3@gmail.com';

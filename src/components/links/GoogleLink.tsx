@@ -1,4 +1,3 @@
-import { useState } from 'react';
 
 interface Props {
   link: string; // Email address to link to

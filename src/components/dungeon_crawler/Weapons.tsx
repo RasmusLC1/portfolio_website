@@ -3,20 +3,17 @@ import SlideTemplate from "./SlideTemplate";
 
 const Weapons = () => {
   const slides = [
-    `/pictures/game/weapons/equip.png`,
-    `/pictures/game/weapons/attack.png`,
-    `/pictures/game/weapons/bow.png`,
-    `/pictures/game/weapons/slashattack.png`,
-    `/pictures/game/weapons/stabattack.png`,
-    `/pictures/game/weapons/effectAttack.png`,
-    `/pictures/game/weapons/throwing.png`,
-    `/pictures/game/weapons/attack.png`,
-    `/pictures/game/weapons/fireattack.png`,
-    `/pictures/game/weapons/chargeattack.png`,
+    {image: `/pictures/game/weapons/equip.png`, description: 'Weapons can be equipped'},
+    {image: `/pictures/game/weapons/attack.png`, description: 'Weapons can be used to attack other entities'},
+    {image: `/pictures/game/weapons/bow.png`, description: 'There are different weapons, both ranged and close combat'},
+    {image: `/pictures/game/weapons/slashattack.png`, description: 'Weapons can have different attack types, this is a slash attack'},
+    {image: `/pictures/game/weapons/stabattack.png`, description: 'Stab attack is shown here'},
+    {image: `/pictures/game/weapons/throwing.png`, description: 'Each weapon has a unique special attack and some can be thrown'},
+    {image: `/pictures/game/weapons/fireattack.png`, description: 'The torch can shoot out a burst of fire'},
+    {image: `/pictures/game/weapons/chargeattack.png`, description: 'The halberd can be used to charge into or away from combat'},
   ];
 
   const codeString = `
-
 # Weapons are universal and can be used by both play and enemy
 def Charge_Player_Or_Enemy(self):
     try:
@@ -136,18 +133,21 @@ def Reset_Shot(self):
 
 `;
 
-const description = (<div className = "text">
-    <p className="description">
-      Weapons are a subtype of items and can interract with both player and enemies for dynamic gameplay
-    </p>
-    <ul className="features">
-      <li>Weapons have different basic attacks with unique advantages and limits</li>
-      <li>Weapon have different damage types and can be upgraded</li>
-      <li>There are different subtypes of weapons with unique properties</li>
-      <li>Weapons are rendered dynamically on the entities allowing unique combinations</li>
-      <li>Weapons can be shot or thrown and interract with environment</li>
-    </ul>
-  </div>)
+const description = (
+    <div className="text">
+      <p className="description">
+        Weapons are a subtype of items and interact with both the player and enemies to enhance gameplay.
+      </p>
+      <ul className="features">
+        <li>Weapons have unique basic attacks with specific advantages and limitations.</li>
+        <li>Weapons feature different damage types and can be upgraded.</li>
+        <li>There are various weapon subtypes, each with distinct properties.</li>
+        <li>Weapons are dynamically rendered on entities, allowing for unique combinations.</li>
+        <li>Weapons can be shot or thrown and interact with the environment.</li>
+      </ul>
+    </div>
+  );
+  
   
 
 

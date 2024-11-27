@@ -1,5 +1,3 @@
-import React from "react";
-import Image from "../Images/Image";
 
 interface LanguageProps {
   tech: string;

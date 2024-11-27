@@ -3,10 +3,10 @@ import SlideTemplate from "./SlideTemplate";
 
 const LevelGeneration = () => {
   const slides = [
-    `/pictures/game/levelgenerator/level1.png`,
-    `/pictures/game/levelgenerator/level2.png`,
-    `/pictures/game/levelgenerator/level3.png`,
-    `/pictures/game/levelgenerator/level4.png`,
+    {image: `/pictures/game/levelgenerator/level1.png`, description: 'Random Level example'},
+    {image: `/pictures/game/levelgenerator/level2.png`, description: 'Random Level example'},
+    {image: `/pictures/game/levelgenerator/level3.png`, description: 'Random Level example'},
+    {image: `/pictures/game/levelgenerator/level4.png`, description: 'Random Level example'},
   ];
 
   const codeString = `
@@ -127,18 +127,20 @@ def Room_Structure_Circle(self, center_x, center_y, radius):
                 self.cellular_automata.map[x][y] = wall
 `;
 
-const description = (<div className = "text">
-  <p className="description">
-    Random level generation using cellular automata and refined with random structures and elements
-  </p>
-  <ul className="features"> {/* Corrected usage of ul for list items */}
-    <li>First generate a random noisemap with 1 and 0 to represent walls and floors</li>
-    <li>Second refine the noise map using cellular automata to generate the dungeon layout</li>
-    <li>Third spawns structures and entities within the cellular automata</li>
-    <li>Fourth check that critical structures and enemies can pathfind to the player to prevent unreachable objects</li>
-
-  </ul>
-</div>)
+const description = (
+    <div className="text">
+      <p className="description">
+        Random level generation using cellular automata, refined with random structures and elements.
+      </p>
+      <ul className="features">
+        <li>Generate a random noise map with 1s and 0s representing walls and floors.</li>
+        <li>Refine the noise map using cellular automata to create the dungeon layout.</li>
+        <li>Place structures and entities within the dungeon.</li>
+        <li>Ensure that critical structures and enemies can pathfind to the player to avoid unreachable areas.</li>
+      </ul>
+    </div>
+  );
+  
 
 
   return (

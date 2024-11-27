@@ -2,13 +2,14 @@ import SlideTemplate from "./SlideTemplate";
 
 
 const Enemies = () => {
-  const slides = [
-    `/pictures/game/enemies/differentenemies.png`,
-    `/pictures/game/enemies/shooting.png`,
-    `/pictures/game/enemies/attack.png`,
-    `/pictures/game/enemies/snare.png`,
-    `/pictures/game/enemies/retreat.png`,
-  ];
+    const slides = [
+        {image: `/pictures/game/enemies/differentenemies.png`, description: 'There are many different enemies with unique attack patterns'},
+        {image: `/pictures/game/enemies/shooting.png`, description: 'Enemies can aim and shoot at the player'},
+        {image: `/pictures/game/enemies/attack.png`, description: 'The spider will first shoot a spiderweb at the player'},
+        {image: `/pictures/game/enemies/snare.png`, description: 'It will then jump at the player and apply poison when the player is snared'},
+        {image: `/pictures/game/enemies/retreat.png`, description: 'The spider will then retreat and attack again'}
+      ];
+
 
   const codeString = `
 # Enemy base logic
@@ -279,27 +280,27 @@ class Spider(Enemy):
 
 `;
 
-const description = (<div className = "text">
-    <p className="description">
-      Enemies can pathfind towards the player and perform strategies to present the player with a dynamic challenge
-    </p>
-    <ul className="features">
-      <li>Enemies inherit from the same base class as the player and share properties</li>
-      <li>Different enemies have different attack patterns</li>
-      <li>Enemies can shoot and aim projectiles at the player</li>
-      <li>Example: the spider</li>
-      <li>The spider keeps distance from the player and retreat if the player gets to close</li>
-      <li>Will shoot a spiderweb at the player and jump towards the player</li>
-      <li>The spiderweb snares the player and the spider poisons the player</li>
-      <li>The spider then retreats and waits to attack again</li>
-      <li>The spider then retreats and waits to attack again</li>
-      <li>The spider then retreats and waits to attack again</li>
-      <li>The spider then retreats and waits to attack again</li>
-      <li>The spider then retreats and waits to attack again</li>
-      <li>The spider then retreats and waits to attack again</li>
-      <li>The spider then retreats and waits to attack again</li>
-    </ul>
-  </div>)
+
+
+
+const description = (
+    <div className="text">
+      <p className="description">
+        Enemies can pathfind towards the player and use strategies to make combat more challenging.
+      </p>
+      <ul className="features">
+        <li>Enemies share a base class with the player and have similar properties.</li>
+        <li>Each enemy has unique attack patterns.</li>
+        <li>Enemies can aim and shoot projectiles at the player.</li>
+        <li>Example: the spider.</li>
+        <li>The spider keeps its distance and retreats if the player gets too close.</li>
+        <li>It shoots a web at the player and jumps to attack.</li>
+        <li>The web snares the player, and the spider poisons them.</li>
+        <li>After attacking, the spider retreats and waits to strike again.</li>
+      </ul>
+    </div>
+  );
+  
   
 
 

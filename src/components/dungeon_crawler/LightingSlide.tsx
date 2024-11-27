@@ -3,9 +3,9 @@ import SlideTemplate from "./SlideTemplate";
 
 const LightingSlide = () => {
   const slides = [
-    `/pictures/game/light/torchlight.png`,
-    `/pictures/game/light/pickinguptorch.png`,
-    `/pictures/game/light/torchequip.png`,
+    {image: `/pictures/game/light/torchlight.png`,description: 'Torches and other items can generate light around them'},
+    {image: `/pictures/game/light/pickinguptorch.png`,description: 'Picking up the torch removes the light from the area'},
+    {image: `/pictures/game/light/torchequip.png`,description: 'The Player can  then equip the light to have a lightsource that follows them around'},
   ];
 
   const codeString = `
@@ -63,18 +63,21 @@ def Move_Light(self, pos, light_source, tile):
         light.Setup_Tile_Light()  # Recalculate the light for the nearby light sources
 `;
 
-const description = (<div className = "text">
+const description = (
+  <div className="text">
     <p className="description">
-      Dynamic lighting engine that interacts with enemy AI and affects the player's vision
+      A dynamic lighting engine that interacts with enemy AI and affects the player's visibility.
     </p>
-    <ul className="features"> {/* Corrected usage of ul for list items */}
-      <li>Raycaster based lighting system</li>
-      <li>Precomputed angles for optimisation</li>
-      <li>Tile check for error handling and performance improvement</li>
-      <li>Check for nearby lights to only update relevant light sources</li>
-      <li>Only update lights on trigger for performance</li>
+    <ul className="features">
+      <li>Lighting system based on raycasting.</li>
+      <li>Uses precomputed angles to optimize performance.</li>
+      <li>Performs tile checks to handle errors and improve efficiency.</li>
+      <li>Updates only relevant light sources by checking nearby lights.</li>
+      <li>Triggers light updates only when necessary to save resources.</li>
     </ul>
-  </div>)
+  </div>
+);
+
   
 
 
