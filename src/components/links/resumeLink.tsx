@@ -2,9 +2,10 @@ import { useState } from "react";
 
 interface Props {
   link: string;
+  text: string;
 }
 
-const ResumeLink = ({ link }: Props) => {
+const ResumeLink = ({ link, text}: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -43,7 +44,7 @@ const ResumeLink = ({ link }: Props) => {
           color: "white",
         }}
       >
-        {isHovered ? "Download Resume" : "\u00A0"}
+        {isHovered ?  text: "\u00A0"}
       </p>
     </div>
   );

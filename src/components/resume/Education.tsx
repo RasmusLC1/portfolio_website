@@ -49,7 +49,7 @@ const Education = () => {
     courses: [
       {
         course: 'Reason for Ending Degree',
-        description: 'I have always been interested in philosophy, but I also know it is not something I wish to work with. When Covid-19 started, I decided to study philosophy for a year and plan the next steps after',
+        description: 'I have always been interested in philosophy. When Covid-19 started, I decided to study philosophy for a year and plan the next steps after',
       },
       {
         course: 'Ethics',

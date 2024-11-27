@@ -11,7 +11,7 @@ const ProfilePane = () => {
   const githubURL = 'https://github.com/RasmusLC1';
   const linkedinhubURL = 'https://www.linkedin.com/in/rcarlsen853/';
   const emailURL = 'rasmus.lc3@gmail.com';
-  const resumeURL = `${import.meta.env.BASE_URL}/public/CV/CV - Rasmus Ladefoged Carlsen.pdf`;
+  const resumeURL = `${import.meta.env.BASE_URL}/public/PDF/CV - Rasmus Ladefoged Carlsen.pdf`;
 
 
 
@@ -24,7 +24,7 @@ const ProfilePane = () => {
         <GitHubLink link={githubURL} size = "32" className = "link-container" showLink = {true} />
         <LinkedInLink link={linkedinhubURL} />
         <EmailLink link={emailURL} />
-        <ResumeLink link = {resumeURL}/>
+        <ResumeLink link = {resumeURL} text = "Download Resume"/>
       </div>
     );
   };
