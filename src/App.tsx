@@ -50,11 +50,11 @@ function App() {
       case "Dungeon Crawler":
         return <DungeonCrawler setCurrentPage={setCurrentPage}/>;
       case "Polynomial Multiplication":
-        return <PolynomialMultiplication />;
+        return <PolynomialMultiplication setCurrentPage={setCurrentPage}/>;
       case "Recipe Web App":
         return <RecipeApp setCurrentPage={setCurrentPage}/>;
       case "Wolfenstein Renderer":
-        return <WolfenSteinRenderer />;
+        return <WolfenSteinRenderer setCurrentPage={setCurrentPage}/>;
       default:
         return frontPage();
     }

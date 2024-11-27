@@ -39,7 +39,7 @@
   position: absolute;
   top: 40px;
   width: 200px;
-  height: 1000px; /* Set the height to 100px */
+  height: 100vh; /* Set the height to 100px */
   left: 0;
   background-color: #242424;
   overflow: hidden; /* Hide overflow */
