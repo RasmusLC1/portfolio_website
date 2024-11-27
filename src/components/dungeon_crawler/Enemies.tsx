@@ -1,15 +1,13 @@
 import SlideTemplate from "./SlideTemplate";
 
-
 const Enemies = () => {
     const slides = [
-        {image: `/pictures/game/enemies/differentenemies.png`, description: 'There are many different enemies with unique attack patterns'},
-        {image: `/pictures/game/enemies/shooting.png`, description: 'Enemies can aim and shoot at the player'},
-        {image: `/pictures/game/enemies/attack.png`, description: 'The spider will first shoot a spiderweb at the player'},
-        {image: `/pictures/game/enemies/snare.png`, description: 'It will then jump at the player and apply poison when the player is snared'},
-        {image: `/pictures/game/enemies/retreat.png`, description: 'The spider will then retreat and attack again'}
-      ];
-
+        { image: `${import.meta.env.BASE_URL}pictures/game/enemies/differentenemies.png`, description: 'There are many different enemies with unique attack patterns' },
+        { image: `${import.meta.env.BASE_URL}pictures/game/enemies/shooting.png`, description: 'Enemies can aim and shoot at the player' },
+        { image: `${import.meta.env.BASE_URL}pictures/game/enemies/attack.png`, description: 'The spider will first shoot a spiderweb at the player' },
+        { image: `${import.meta.env.BASE_URL}pictures/game/enemies/snare.png`, description: 'It will then jump at the player and apply poison when the player is snared' },
+        { image: `${import.meta.env.BASE_URL}pictures/game/enemies/retreat.png`, description: 'The spider will then retreat and attack again' }
+    ];
 
   const codeString = `
 # Enemy base logic

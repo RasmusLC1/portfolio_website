@@ -5,12 +5,12 @@ const InventorySystem = () => {
 
 
   const slides = [
-      {image: `/pictures/game/inventorysystem/itemonground.png`, description: 'Item on the ground'},
-      {image: `/pictures/game/inventorysystem/iteminventory.png`, description: 'Item in inventory'},
-      {image: `/pictures/game/inventorysystem/dragitem.png`, description: 'Dragging item around'},
-    {image: `/pictures/game/inventorysystem/weaponequipped.png`, description: 'Weapon in equipped inventory slot'},
-    {image: `/pictures/game/inventorysystem/fullinventory.png`, description: ' items stacks when picked up and the inventory can be filled'},
-    {image: `/pictures/game/inventorysystem/tooltip.png`, description: 'Each item has a auto generated tooltip'},
+      {image: `${import.meta.env.BASE_URL}/pictures/game/inventorysystem/itemonground.png`, description: 'Item on the ground'},
+      {image: `${import.meta.env.BASE_URL}/pictures/game/inventorysystem/iteminventory.png`, description: 'Item in inventory'},
+      {image: `${import.meta.env.BASE_URL}/pictures/game/inventorysystem/dragitem.png`, description: 'Dragging item around'},
+      {image: `${import.meta.env.BASE_URL}/pictures/game/inventorysystem/weaponequipped.png`, description: 'Weapon in equipped inventory slot'},
+      {image: `${import.meta.env.BASE_URL}/pictures/game/inventorysystem/fullinventory.png`, description: ' items stacks when picked up and the inventory can be filled'},
+      {image: `${import.meta.env.BASE_URL}/pictures/game/inventorysystem/tooltip.png`, description: 'Each item has a auto generated tooltip'},
   ];
 
   const codeString = `

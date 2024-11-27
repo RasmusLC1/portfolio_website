@@ -82,10 +82,16 @@ html, body {
 
 /* Container that holds the side-by-side panes */
 .split-container {
-  display: flex;
-  flex: 1; /* Fills the remaining space */
-  overflow: hidden; /* Prevents scrolling on split-container */
+  display: flex; 
+  flex-direction: row; 
+  align-items: flex-start; 
+  justify-content: center;
   width: 100%;
+  height: 90vh; 
+  box-sizing: border-box;
+  padding-top: 100px; 
+  gap: 20px; 
+  margin-bottom: 10vh;
 
 }
 

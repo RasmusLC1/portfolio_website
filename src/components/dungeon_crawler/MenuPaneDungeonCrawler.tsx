@@ -6,16 +6,17 @@ interface MenuProps {
 const MenuPaneDungeonCrawler = ({ setCurrentPage }: MenuProps) => {
   return (
     <div className="pane pane-menu">
-      <a
-        href="#"
-        onClick={() => setCurrentPage("frontPage")}
-        className="front-page-link"
-      >
-        Front Page
-      </a>
+      
       <nav className="menu">
         <ul>
-        <li className = "frontpagebutton">
+        <li>
+            <a
+            href="#"
+            onClick={() => setCurrentPage("frontPage")}
+            className="front-page-link"
+          >
+            Front Page
+          </a>
           </li>
           <li>
             <a href="#introduction">Introduction</a>

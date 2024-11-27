@@ -26,20 +26,7 @@
   position: relative; /* Needed for absolute positioning of Front Page link */
 }
 
-/* Position the Front Page link */
-.pane-menu .front-page-link {
-  position: absolute;
-  left: 20px; /* Adjust spacing from the left edge */
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #b85c0b; /* Set font color to orange */
-  text-decoration: none;
-}
 
-.pane-menu .front-page-link:hover {
-  color: #d7d6d6;
-  transform: scale(1.2);
-}
 
 /* Style the menu */
 .menu {
@@ -81,9 +68,7 @@
     transform: scale(1.2);
   }
 
-  .front-page-link{
-    margin-left: 10%;
-  }
+
 
   .section {
     height: 100vh;
@@ -109,17 +94,17 @@
   
 
 /* Container that holds the side-by-side panes */
-.split-container {
-    display: flex; 
-    flex-direction: row; 
-    align-items: flex-start; 
-    justify-content: center;
-    width: 100%;
-    height: 90vh; 
-    box-sizing: border-box;
-    padding-top: 100px; 
-    gap: 20px; 
-    margin-bottom: 10vh;
+.split-container-dungeoncrawler {
+  display: flex; 
+  flex-direction: row; 
+  align-items: flex-start; 
+  justify-content: center;
+  width: 100%;
+  height: 90vh; 
+  box-sizing: border-box;
+  padding-top: 100px; 
+  gap: 20px; 
+  margin-bottom: 10vh;
 }
 
 /* Code display section */
@@ -142,8 +127,7 @@
   }
 
 
-/* Carousel section */
-.display {
+  .display {
     width: 50%; 
     height: 100vh; 
     display: flex; 
@@ -151,30 +135,28 @@
     justify-content: flex-start;
     overflow: hidden;
     flex-direction: column;
-    padding-top: 10px;
     font-size: 1rem;
-    
 }
-
 
 .text {
-  display: flex;  /* Enables flexbox properties */
-  flex-direction: column; /* Aligns children elements vertically */
-  align-items: flex-start; /* Aligns children items to the start (left) */
-  justify-content: flex-start; /* Aligns container content to the start vertically (top) */
-  text-align: left; /* Aligns text inside the flex container to the left */
-  font-size: 1.2rem;
-  height: 20%; /* Set a fixed height */
-  background-color: #3b3b3b;
-  border-radius: 10px; /* Rounds the corners */
-  padding: 10px; /* Adds space inside the container, around the content */
-  width: 60%;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  overflow-y: auto; /* Enables vertical scrolling when content exceeds the height */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-}
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 1.2rem;
+    height: auto; /* Let height adjust dynamically */
+    background-color: #3b3b3b;
 
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+    height: 25%;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 .features,
 .description{
@@ -219,6 +201,3 @@
     padding: 10px; /* Adds spacing inside the border */
 }
 
-.frontpagebutton{
-  justify-content: left;
-}

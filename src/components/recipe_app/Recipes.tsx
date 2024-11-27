@@ -3,10 +3,10 @@ import SlideTemplate from "../dungeon_crawler/SlideTemplate";
 
 const Recipes = () => {
     const slides = [
-        {image: `/pictures/recipeapp/create recipe.png`, description: 'Ability to add recipes'},
-        {image: `/pictures/recipeapp/recipeadded.png`, description: 'Recipe added, can be removed with the x button'},
-        {image: `/pictures/recipeapp/thumbnail.png`, description: 'Recipes can have thumbnails for visual design'},
-        {image: `/pictures/recipeapp/multiplerecipes.png`, description: 'Multiple recipes can be added and stored in memory with JSON'},
+        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/create recipe.png`, description: 'Ability to add recipes'},
+        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/recipeadded.png`, description: 'Recipe added, can be removed with the x button'},
+        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/thumbnail.png`, description: 'Recipes can have thumbnails for visual design'},
+        {image: `${import.meta.env.BASE_URL}  /pictures/recipeapp/multiplerecipes.png`, description: 'Multiple recipes can be added and stored in memory with JSON'},
       ];
 
 

@@ -24,7 +24,7 @@ const SlideTemplate = ({
   );
 
   const renderDisplay = () => (
-    <div className="split-container">
+    <div className="split-container-dungeoncrawler">
       <div className="display">
         <Carousel slides={slides} /> {/* Pass the entire slides array */}
         {description}

@@ -3,9 +3,9 @@ import SlideTemplate from "./SlideTemplate";
 
 const LightingSlide = () => {
   const slides = [
-    {image: `/pictures/game/light/torchlight.png`,description: 'Torches and other items can generate light around them'},
-    {image: `/pictures/game/light/pickinguptorch.png`,description: 'Picking up the torch removes the light from the area'},
-    {image: `/pictures/game/light/torchequip.png`,description: 'The Player can  then equip the light to have a lightsource that follows them around'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/light/torchlight.png`,description: 'Torches and other items can generate light around them'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/light/pickinguptorch.png`,description: 'Picking up the torch removes the light from the area'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/light/torchequip.png`,description: 'The Player can  then equip the light to have a lightsource that follows them around'},
   ];
 
   const codeString = `

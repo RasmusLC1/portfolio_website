@@ -3,13 +3,13 @@ import SlideTemplate from "./SlideTemplate";
 
 const Runes = () => {
   const slides = [
-    {image: `/pictures/game/runes/runeselection.png`, description: ''},
-    {image: `/pictures/game/runes/upgrading runes.png`, description: ''},
-    {image: `/pictures/game/runes/purchasebutton.png`, description: ''},
-    {image: `/pictures/game/runes/purchasedash.png`, description: ''},
-    {image: `/pictures/game/runes/dashbought.png`, description: ''},
-    {image: `/pictures/game/runes/dashinventory.png`, description: ''},
-    {image: `/pictures/game/runes/dash.png`, description: ''}
+    {image: `${import.meta.env.BASE_URL}/pictures/game/runes/runeselection.png`, description: ''},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/runes/upgrading runes.png`, description: ''},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/runes/purchasebutton.png`, description: ''},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/runes/purchasedash.png`, description: ''},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/runes/dashbought.png`, description: ''},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/runes/dashinventory.png`, description: ''},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/runes/dash.png`, description: ''}
   ];
 
   const codeString = `

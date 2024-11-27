@@ -3,10 +3,10 @@ import SlideTemplate from "./SlideTemplate";
 
 const LevelGeneration = () => {
   const slides = [
-    {image: `/pictures/game/levelgenerator/level1.png`, description: 'Random Level example'},
-    {image: `/pictures/game/levelgenerator/level2.png`, description: 'Random Level example'},
-    {image: `/pictures/game/levelgenerator/level3.png`, description: 'Random Level example'},
-    {image: `/pictures/game/levelgenerator/level4.png`, description: 'Random Level example'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/levelgenerator/level1.png`, description: 'Random Level example'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/levelgenerator/level2.png`, description: 'Random Level example'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/levelgenerator/level3.png`, description: 'Random Level example'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/levelgenerator/level4.png`, description: 'Random Level example'},
   ];
 
   const codeString = `

@@ -3,14 +3,14 @@ import SlideTemplate from "./SlideTemplate";
 
 const Weapons = () => {
   const slides = [
-    {image: `/pictures/game/weapons/equip.png`, description: 'Weapons can be equipped'},
-    {image: `/pictures/game/weapons/attack.png`, description: 'Weapons can be used to attack other entities'},
-    {image: `/pictures/game/weapons/bow.png`, description: 'There are different weapons, both ranged and close combat'},
-    {image: `/pictures/game/weapons/slashattack.png`, description: 'Weapons can have different attack types, this is a slash attack'},
-    {image: `/pictures/game/weapons/stabattack.png`, description: 'Stab attack is shown here'},
-    {image: `/pictures/game/weapons/throwing.png`, description: 'Each weapon has a unique special attack and some can be thrown'},
-    {image: `/pictures/game/weapons/fireattack.png`, description: 'The torch can shoot out a burst of fire'},
-    {image: `/pictures/game/weapons/chargeattack.png`, description: 'The halberd can be used to charge into or away from combat'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/equip.png`, description: 'Weapons can be equipped'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/attack.png`, description: 'Weapons can be used to attack other entities'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/bow.png`, description: 'There are different weapons, both ranged and close combat'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/slashattack.png`, description: 'Weapons can have different attack types, this is a slash attack'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/stabattack.png`, description: 'Stab attack is shown here'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/throwing.png`, description: 'Each weapon has a unique special attack and some can be thrown'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/fireattack.png`, description: 'The torch can shoot out a burst of fire'},
+    {image: `${import.meta.env.BASE_URL}/pictures/game/weapons/chargeattack.png`, description: 'The halberd can be used to charge into or away from combat'},
   ];
 
   const codeString = `
