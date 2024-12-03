@@ -62,6 +62,7 @@
 }
 
 .project-language {
+  color: #d7d6d6;
   list-style-type: disc;
   margin-left: 20px; /* Adjust if necessary to position the entire block */
   padding-left: 0; /* Removes default padding */
@@ -87,6 +88,7 @@ margin-bottom: 100px;
   align-items: center; /* Vertically center items */
   padding: 4px 8px;
   margin: 4px;
+  color: white;
   background: #595858;
   border: none;
   cursor: pointer;
@@ -244,7 +246,7 @@ margin-bottom: 100px;
   font-size: 1.2rem;
   margin-right: 10px;
   background-color: #595858; /* Default background */
-  color: white;
+  color: #d7d6d6;
   border: none;
   padding: 10px 20px;
   cursor: pointer;

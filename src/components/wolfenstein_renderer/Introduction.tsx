@@ -13,6 +13,7 @@ const Introduction = () => {
       github: "https://github.com/RasmusLC1/Wolfenstein-Renderer",
       features: "Focus on simulating 3D rendering using Wolfenstein rendering method and early demo for my Python Dungeon Crawler game",
     };
+    console.log(temp)
     
     const techSection = () => {
         return (<div className='techsection'>

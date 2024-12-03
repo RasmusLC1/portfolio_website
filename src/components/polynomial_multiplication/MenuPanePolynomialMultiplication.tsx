@@ -5,7 +5,7 @@ interface MenuProps {
 }
 
 const MenuPanePolynomialMultiplication = ({ setCurrentPage }: MenuProps) => {
-  const bachelorURL = `${import.meta.env.BASE_URL}/public/PDF/Bachelor_Polynomial_Multiplication.pdf`;
+  const bachelorURL = `${import.meta.env.BASE_URL}/PDF/Bachelor_Polynomial_Multiplication.pdf`;
 
   return (
     <div className="pane pane-menu">

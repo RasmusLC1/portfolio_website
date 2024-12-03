@@ -3,9 +3,7 @@ import './WolfenSteinRenderer.css'; // Import the CSS file
 import MenuPaneRecipeApp from './MenuPaneWolfenstein';
 import Introduction from './Introduction';
 import ThreeD from './ThreeD';
-import Twodraycasting from './twodraycasting';
-
-
+import TwoDRaycasting from './TwoDRaycasting';
 interface DungeonProps{
   setCurrentPage: (page: string) => void;
 }
@@ -21,7 +19,7 @@ const WolfenSteinRenderer = ({setCurrentPage}: DungeonProps) => {
 
         <div className="content-container">
           {Introduction()}
-          {Twodraycasting()}
+          {TwoDRaycasting()}
           {ThreeD()}
           </div>
           </div>

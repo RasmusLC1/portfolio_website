@@ -3,6 +3,9 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'DM Sans', sans-serif; 
+  background-color: #242424;
+  color: #d7d6d6;
+
 }
 
 /* Content container that includes the menu pane and main content */
@@ -13,6 +16,8 @@ html, body {
   width: 100%;
   height: 100vh; /* Adjust height if necessary */
   transition: transform 0.3s ease; /* Smooth transform transition */
+  color: #d7d6d6;
+
 }
 
 /* Shift content to the right when burger menu is open */
@@ -38,7 +43,7 @@ html, body {
   scroll-behavior: smooth;
   box-sizing: border-box;
   z-index: 999; /* Ensure it sits above other content */
-  
+  color: white
 }
 
 /* Style the menu */
@@ -59,7 +64,6 @@ html, body {
 }
 
 .menu a {
-  color: #d7d6d6;
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -109,6 +113,8 @@ html, body {
 
 /* Styles for the scrollable pane */
 .pane-scrollable{
+  width: 165%;
+  background-color: white;
   flex-grow: 1; /* Grow to fill the remaining space */
   overflow-y: auto; /* Enables vertical scrolling */
   overflow-x: hidden;
@@ -172,6 +178,7 @@ html, body {
 }
 
 .menuButton {
+  color: white;
   font-size: 1.3rem;
   outline: none; /* Remove default outline */
   border: none; /* Optional: Remove default border if present */

@@ -1,6 +1,6 @@
 import SlideTemplate from "../dungeon_crawler/SlideTemplate";
 
-const Twodraycasting = () => {
+const TwoDRaycasting = () => {
   const slides = [
     {
       image: `${import.meta.env.BASE_URL}/pictures/wolfenstein/2draycaster.png`,
@@ -179,4 +179,4 @@ public void ZombieControl(ZombieSpawner zombiespawner, LevelCreator level){
   );
 };
 
-export default Twodraycasting;
+export default TwoDRaycasting;
