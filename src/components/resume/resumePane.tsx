@@ -93,10 +93,12 @@ const ResumePane: React.FC<ResumeProps> = ({
 
   return (
     <div className="pane pane-scrollable">
+      <div className = "resume-content">
         <About />
         <Experience setCurrentPage={setCurrentPage} />
-      {workAndEducation()}
+        {workAndEducation()}
         <Projects setCurrentPage={setCurrentPage} />
+        </div>
     </div>
   );
 };

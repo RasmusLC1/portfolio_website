@@ -5,7 +5,6 @@ html, body {
   font-family: 'DM Sans', sans-serif; 
   background-color: #242424;
   color: #d7d6d6;
-
 }
 
 /* Content container that includes the menu pane and main content */
@@ -17,8 +16,9 @@ html, body {
   height: 100vh; /* Adjust height if necessary */
   transition: transform 0.3s ease; /* Smooth transform transition */
   color: #d7d6d6;
-
+  overflow-y: auto;
 }
+
 
 /* Shift content to the right when burger menu is open */
 .content-container.menu-open {
@@ -113,8 +113,8 @@ html, body {
 
 /* Styles for the scrollable pane */
 .pane-scrollable{
-  width: 165%;
-  background-color: white;
+  width: 100%;
+  background-color: #242424;
   flex-grow: 1; /* Grow to fill the remaining space */
   overflow-y: auto; /* Enables vertical scrolling */
   overflow-x: hidden;
@@ -132,6 +132,7 @@ html, body {
 @media (max-width: 768px) {
   .split-container {
     flex-direction: column;
+    height: 20%;
   }
 
   .pane-stationary,
@@ -202,4 +203,8 @@ html, body {
 
 .resume-link{
   fill: white
+}
+
+.github-calendar .contrib-footer {
+  display: none;
 }
