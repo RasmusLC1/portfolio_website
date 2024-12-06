@@ -1,11 +1,8 @@
-
 interface LanguageProps {
   library: string;
 }
 
 const Libraries = ({ library }: LanguageProps) => {
-
-
   const numpyLogo = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -113,6 +110,38 @@ const Libraries = ({ library }: LanguageProps) => {
       <rect width="10" height="10" x="30" y="28" fill="#00838f"></rect>
       <circle cx="35" cy="15" r="6" fill="#0097a7"></circle>
       <circle cx="35" cy="15" r="3" fill="#006064"></circle>
+    </svg>
+  );
+
+  const prismaLogo = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="1em"
+      height="1em"
+      viewBox="0 0 48 48"
+    >
+      <path
+        fill="#4db6ac"
+        d="M44.284,36.035L27.687,1.429c-0.855-1.783-3.337-1.93-4.397-0.26L4.886,30.177	c-0.397,0.625-0.385,1.426,0.029,2.04l9.271,13.738c0.575,0.852,1.634,1.237,2.623,0.953l25.942-7.458	C44.208,39.031,44.939,37.402,44.284,36.035z M40.618,37.279L18.8,43.388c-0.505,0.142-0.98-0.305-0.87-0.818l7.735-36.097	c0.139-0.65,1.023-0.755,1.311-0.157l14.265,29.621C41.489,36.481,41.194,37.118,40.618,37.279z"
+      ></path>
+    </svg>
+  );
+
+  const nextJSLogo = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="1em"
+      height="1em"
+      viewBox="0 0 48 48"
+    >
+      <path
+        fill="#212121"
+        d="M18.974,31.5c0,0.828-0.671,1.5-1.5,1.5s-1.5-0.672-1.5-1.5v-14c0-0.653,0.423-1.231,1.045-1.43 c0.625-0.198,1.302,0.03,1.679,0.563l16.777,23.704C40.617,36.709,44,30.735,44,24c0-11-9-20-20-20S4,13,4,24s9,20,20,20 c3.192,0,6.206-0.777,8.89-2.122L18.974,22.216V31.5z M28.974,16.5c0-0.828,0.671-1.5,1.5-1.5s1.5,0.672,1.5,1.5v13.84l-3-4.227 V16.5z"
+      ></path>
     </svg>
   );
 
@@ -251,8 +280,12 @@ const Libraries = ({ library }: LanguageProps) => {
         return multerLogo;
       case ".NET":
         return dotNETLogo;
-        case "GNU":
-          return gccLogo;
+      case "GNU":
+        return gccLogo;
+      case "Prisma":
+        return prismaLogo;
+      case "Next.js":
+        return nextJSLogo;
       default:
         return null;
     }

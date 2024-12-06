@@ -61,6 +61,8 @@
   color: #b0b0b0;
 }
 
+
+
 .project-language {
   color: #d7d6d6;
   list-style-type: disc;
@@ -246,6 +248,7 @@ margin-bottom: 100px;
 .ProjectButton {
   font-size: 1.2rem;
   margin-right: 10px;
+  margin-bottom: 10px;
   background-color: #595858; /* Default background */
   color: #d7d6d6;
   border: none;

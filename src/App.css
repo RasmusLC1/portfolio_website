@@ -127,23 +127,6 @@ html, body {
 
 
 
-
-/* Responsive layout for smaller screens */
-@media (max-width: 768px) {
-  .split-container {
-    flex-direction: column;
-    height: 20%;
-  }
-
-  .pane-stationary,
-  .pane-scrollable{
-    width: 100%;
-    height: auto; /* Adjust height for stacked layout */
-    scroll-behavior: smooth;
-  }
-}
-
-
 /* Image styles */
 .rounded-image {
   border-radius: 10px;
