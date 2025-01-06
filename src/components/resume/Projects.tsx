@@ -7,6 +7,16 @@ interface ResumeProps{
   }
 
 const Projects = ({setCurrentPage}: ResumeProps) => {
+    const recipePage = {
+      title: 'Recipe Web App',
+      language: ["JavaScript", "TypeScript", "CSS", "HTML"],
+      libraries: ["React", "Next.js"],
+      technologies: ["Node.js", "Stripe", "Resend", "Prisma ORM", "PostgreSQL"],
+      period: 'December 2024 - Present',
+      github: "https://github.com/RasmusLC1/Recipe-App",
+      features: "Full-stack web development project featuring secure payment processing with Stripe, email communication using Resend, database management with Prisma ORM and PostgreSQL, and a responsive front-end built with Next.js."
+    };
+    
     const dungeonCrawler = {
         title: 'Dungeon Crawler',
         language: ["Python"],
@@ -37,15 +47,6 @@ const Projects = ({setCurrentPage}: ResumeProps) => {
         features: "Focus on simulating 3D rendering using Wolfenstein rendering method",
       };
 
-      const recipePage = {
-        title: 'Recipe Web App',
-        language: ["JavaScript", "TypeScript", "CSS", "HTML"],
-        libraries: ["React", "Express", "Bootstrap", "Multer", "Axios" ],
-        technologies: ["Node.js", "Vite", "ESLint"],
-        period: 'November 2024 - Present',
-        github: "https://github.com/RasmusLC1/Recipe-Web-App",
-        features: "Learning full stack web development by building an interactive web app with backend support",
-      };
 
   const [activeProject, setActiveProject] = useState(0)
 
@@ -78,7 +79,7 @@ const Projects = ({setCurrentPage}: ResumeProps) => {
         className={`ProjectButton ${activeProject === 2 ? 'active' : ''}`}
         onClick={() => setActiveProject(2)}
       >
-        Recipe Page <ProgrammingLanguageLogos language="TypeScript" />
+        Recipe Web App <ProgrammingLanguageLogos language="TypeScript" />
       </button>
     );
   };
@@ -97,9 +98,9 @@ const Projects = ({setCurrentPage}: ResumeProps) => {
   const selectProjectButtons = () => {
     return(
       <div className = "selectProjectButtons">
+        {recipePageAppButton()}
         {dungeonCrawlerButton()}
         {polynomialMultiplicationButton()}
-        {recipePageAppButton()}
         {wolfensteinRendererButton()}  
 </div>
     )

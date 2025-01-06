@@ -2,7 +2,7 @@
 import './RecipeApp.css'; // Import the CSS file
 import MenuPaneRecipeApp from './MenuPaneRecipeApp';
 import Introduction from './Introduction';
-import Recipes from './Recipes';
+import Admin from './Admin';
 import Ingredients from './ingredients';
 
 interface DungeonProps{
@@ -20,7 +20,7 @@ const RecipeApp = ({setCurrentPage}: DungeonProps) => {
 
         <div className="content-container">
           {Introduction()}
-          {Recipes()}
+          {Admin()}
           {Ingredients()}
           </div>
           </div>
